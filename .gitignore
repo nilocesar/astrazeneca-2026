@@ -6,3 +6,5 @@ dist/*
 sys/automation/*
 *.zip
 *.doc*
+.DS_Store
+*.DS_Store
