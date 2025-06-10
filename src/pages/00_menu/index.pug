@@ -1,0 +1,45 @@
+extends ../../templates/page/template.page-base-adaptativo.pug
+
+block styles
+	link(rel="stylesheet", href="style.css")
+
+block body
+
+		//- .header
+			
+
+		.body
+			section.sec1
+				//- img.bg.wow.fadeInLeft(src="../../assets/img/sec1a.png", alt="")
+				img.logo.animated.fadeInUp(src="../../assets/img/logo.svg", alt="")
+
+				.base.animated.fadeInUp.delay1
+					h1
+						| Treinamento Anual
+					.block01
+						.text.text1
+							| Procedimentos e Cuidados com
+						.text.text2
+							| Amostras Grátis de Medicamentos
+					.block02
+						.text.text1
+							| <span class="bold">Olá!</span>
+						.text.text1.mt0_5 A fim de otimizar o seu tempo durante este treinamento e passar apenas as informações necessárias para sua atual função nesse momento, pedimos que identifique sua posição para seguirmos com o conteúdo específico.
+					
+
+					img.menuImg(src="../../assets/img/menu01.svg", alt="")
+
+					.menuListX
+						.it.it1(onclick="navigate.goto('01_tela')")
+							| Representante
+						.it.it2(onclick="navigate.goto('02_tela')")
+							| GERENTE DISTRITAL
+						.it.it3(onclick="navigate.goto('03_tela')")
+							| Gerente de Produto<br> OU ANALISTA DE MARCA
+						.it.it4(onclick="navigate.goto('04_tela')")
+							| Outra posição<br> ADMINISTRATIVA
+					
+
+block scripts
+	script(src="../../vendor/wow.min.js")
+	script(src="script.js")

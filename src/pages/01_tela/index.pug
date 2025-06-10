@@ -1,0 +1,480 @@
+extends ../../templates/page/template.page-base-adaptativo.pug
+
+block styles
+	link(rel="stylesheet", href="style.css")
+
+block body
+
+		.header
+			
+
+		.body
+			section.sec1
+				img.logo.wow.fadeInUp(src="../../assets/img/logo.svg", alt="")
+				.titulo.wow.fadeInRight.btnVoltar 
+					button  <i class="fa fa-chevron-circle-left" aria-hidden="true"></i>
+					| <span>Representante</span>
+				
+				.containerTxt.wow.fadeInUp
+					.text.azul 
+						| Bem-vindo ao Treinamento Anual sobre Procedimentos e Cuidados Essenciais na Distribuição de Amostras Grátis de Medicamentos para uma breve atualização dos seus conhecimentos.
+					.text.text1.azul.bold 
+						| Você, Representante do nosso time de campo, em especial, desempenha um papel importante na distribuição dos nossos medicamentos aos profissionais de saúde.<br> Notará que nosso treinamento traz informações importantes sobre<br> os procedimentos, manuseios e cuidados com nossas amostras.
+					.text.text1.mt0_5.azul 
+						| Ao final, teste seus conhecimentos participando do nosso quiz.<br> Para começar, assista ao vídeo que destaca a importância das<br> amostras grátis no nosso setor.
+					.text.text1.mt0_5
+						| <span class="bold roxo">Dê play para assistir!</span>
+				img.wow.zoomIn.tela01_01(src="../../assets/img/tela01_01.svg", alt="")
+
+				.containerVideo.wow.zoomIn.delay1
+						video(src="../../assets/video/video1.mp4" controls controlsList="nodownload"  poster="../../assets/video/video1.png")
+
+				
+			
+				
+			//- .secRef
+			section.sec2.wow.fadeInUp
+				.sec2_block01.wow.fadeInUp
+					h4
+						| Recebimento das Amostras e Aceite no Veeva 
+					h4.prop-l1
+						| RESPONSÁVEL: REPRESENTANTE
+					img.sec2_01_img(src="../../assets/img/sec2_01.svg", alt="")
+				
+				
+				.info.wow.fadeInUp
+					
+					.line
+						.text
+							| <b>O seu processo de controle e cuidados com as amostras começa<br> no recebimento delas.</b> É importante confirmar todas as quantidades<br> com os entregadores e, na sequência,<br> realizar o aceite delas no Veeva.
+						img.sec2_ico2.wow.zoomIn(src="../../assets/img/sec2_ico2.png", alt="")
+						.text.bold.azul.mt1_5 <b>Vamos ver se conhece a ordem correta dos procedimentos que devem ser realizados?</b>
+
+					.arrasteExercicio.arrasteExercicio1(arraste=1)
+						.arrasteExercicioBase
+							.itCons
+								.itContainer
+									.it.it1.dragDrop_element(arraste=1) Clicar no menu minhas amostras
+								.itContainer
+									.it.it2.dragDrop_element(arraste=2) Clicar em 'Recibo de Amostras Pendentes'
+								.itContainer
+									.it.it3.dragDrop_element(arraste=3) Confirmar o número do lote no sistema
+								.itContainer
+									.it.it4.dragDrop_element(arraste=4) Clicar no botão confirmar
+								.itContainer
+									.it.it5.dragDrop_element(arraste=5) Informar a quantidade Recebida
+								.itContainer
+									.it.it6.dragDrop_element(arraste=6) Salvar
+
+							.contCons
+								.contContainer
+									.cont.dragDrop_element(alvo=1)
+								.contContainer
+									.cont.dragDrop_element(alvo=2)
+								.contContainer
+									.cont.dragDrop_element(alvo=3)
+								.contContainer
+									.cont.dragDrop_element(alvo=4)
+								.contContainer
+									.cont.dragDrop_element(alvo=5)
+								.contContainer
+									.cont.dragDrop_element(alvo=6)
+
+						butom.confirmar.mt2
+							| <span>Clique</span> para conferir.
+
+						.feed.feed-pos.wow.fadeIn
+							img(src="../../assets/img/check.svg", alt="")
+							.text.text4
+								| <span class="bold">Isso mesmo! Esse é o passo a passo que deve realizar no recebimento das amostras.</span>
+						
+						.feed.feed-neg.wow.fadeIn
+							img(src="../../assets/img/erro.svg", alt="")
+							.text.text4
+								| <span class="bold vermelho">Humm... teve alguns erros :(. Dê uma olhada na ordem correta e, se achar que está com dificuldade nesse tema, <a class="link vermelho" href="https://astrazeneca.sabacloud.com/Saba/Web_spf/E102PRD0001/common/ledetail/cours000000025483552/latestversion" target="_blank">clique</a> e assista ao vídeo com orientações completas.</span>
+						
+						.text.alert.text1.mt1.wow.fadeIn
+								| Caso tenha alguma dificuldade nesse procedimento, consulte o material específico deste tema no Cornerstone SBX, para encontrá-lo digite: <b>‘Transação de Amostra Grátis – Veeva’</b>
+			
+			
+								
+				.info.info2.wow.fadeInUp.mt4_5 
+					
+					img.sec2_02_img(src="../../assets/img/sec2_02.svg", alt="")
+					
+					.line.line2
+						h2.azul Gerenciamento de entrega de <br><span>amostras junto aos HCPs</span>
+						.text.itx1
+							| <span class="xt1">Somada a promoção e disseminação de conhecimento que agrega em seus</span> <span class="xt2"> relacionamentos, o controle da entrega de amostras aos médicos requer</span> <span class="xt3">cuidado, pois o manuseio inadequado dos nossos medicamentos pode acarretar consequências ao produto, bem como ao paciente final.</span>
+						.text.bold.azul.itx2 <b>Portanto, é fundamental registrar com precisão as quantidades e os lotes das amostras fornecidas a cada médico no Veeva CRM.</b>
+						.text.bold.azul.mt1_5 <b>Confira seus conhecimentos sobre esse processo enumerando na ordem cada uma das etapas:</b>
+
+					.arrasteExercicio.arrasteExercicio1(arraste=1)
+						.arrasteExercicioBase
+							.itCons
+								.itContainer
+									.it.it1.dragDrop_element(arraste=1) Acessar o Veeva iRep
+								.itContainer
+									.it.it2.dragDrop_element(arraste=2) Clicar em 'meu painel'
+								.itContainer
+									.it.it3.dragDrop_element(arraste=3) Selecionar o médico visitado
+								.itContainer
+									.it.it4.dragDrop_element(arraste=4) Registrar sua visita
+								.itContainer
+									.it.it5.dragDrop_element(arraste=5) Selecionar os produtos promovidos
+								.itContainer
+									.it.it6.dragDrop_element(arraste=6) Clicar em adicionar sample
+								.itContainer
+									.it.it7.dragDrop_element(arraste=7) Lançar a quantidade entregue
+								.itContainer
+									.it.it8.dragDrop_element(arraste=8) Coletar assinatura do médico
+								.itContainer
+									.it.it9.dragDrop_element(arraste=9) Enviar
+
+							.contCons
+								.contContainer
+									.cont.dragDrop_element(alvo=1)
+								.contContainer
+									.cont.dragDrop_element(alvo=2)
+								.contContainer
+									.cont.dragDrop_element(alvo=3)
+								.contContainer
+									.cont.dragDrop_element(alvo=4)
+								.contContainer
+									.cont.dragDrop_element(alvo=5)
+								.contContainer
+									.cont.dragDrop_element(alvo=6)
+								.contContainer
+									.cont.dragDrop_element(alvo=7)
+								.contContainer
+									.cont.dragDrop_element(alvo=8)
+								.contContainer
+									.cont.dragDrop_element(alvo=9)
+
+						butom.confirmar.mt2
+							| <span>Clique</span> para conferir.
+
+						.feed.feed-pos.wow.fadeIn
+							img(src="../../assets/img/check.svg", alt="")
+							.text.text4
+								| <span class="bold">Essa é a ordem correta! Caso tenha alguma dúvida, consulte o material específico no Cornerstone SBX, busque como ‘Transação de Amostra Gratis – Veeva.</span>
+						
+						.feed.feed-neg.wow.fadeIn
+							img(src="../../assets/img/erro.svg", alt="")
+							.text.text4
+								| <span class="bold vermelho"> Remontamos os processos na ordem correta para facilitar o entendimento, caso tenha alguma dificuldade com esse procedimento, <a class="link vermelho" href="https://astrazeneca.sabacloud.com/Saba/Web_spf/E102PRD0001/common/ledetail/cours000000025483548/latestversion" target="_blank">clique aqui</a> para assistir ao vídeo com as orientações completas que está disponível no Cornerstone SBX.
+								
+
+				.info.info2.wow.fadeInUp.mt4_5
+					img.sec2_01_img(src="../../assets/img/sec2_03.svg", alt="")
+					.line2
+						h2.resetLeft.azul 
+							| Qualidade das Amostras 
+						.text
+							| A fim de mantermos a qualidade e eficácia dos nossos<br> medicamentos, é fundamental que, quando estiverem sob<br> sua responsabilidade, siga algumas diretrizes importantes<br> para o armazenamento das amostras.
+						.text.mt1 O vídeo a seguir oferece dicas sobre armazenamento e manuseio dos medicamentos. <b class="azul">Lembre-se que é sua responsabilidade garantir a qualidade das amostras que estão sob os seus cuidados.</b>
+						.containerVideo.wow.zoomIn.delay1
+							video(src="../../assets/video/video2.mp4" controls controlsList="nodownload"  poster="../../assets/video/video2.png")
+
+						
+			
+			section.sec3.wow.fadeInUp
+				
+				.containerTxt.wow.fadeInUp
+					h2.branca 
+						| CUIDADOS ESPECIAIS
+					h1.branca 
+						| QTERN
+
+				
+
+				.info
+					img.alert.wow.zoomIn(src="../../assets/img/alert.svg", alt="")
+					.text 
+						| Como já sabe, <b class="azul">o Qtern é um medicamento que deve ser transportado em condições <br>controladas, entre 15°C e 25°C</b>, utilizando embalagens térmicas qualificadas para <br>não perder sua eficácia. Por isso, ele requer atenção especial, do momento do <br>recebimento até a promoção junto ao médico.
+					.text.mt1.text2 
+						| <b class="azul">Todo o transporte do Qtern deve ser realizado em isopores com gelo e cabe a você os seguintes cuidados:</b>
+					.list.mt1
+						.it
+							img.wow.zoomIn(src="../../assets/img/calendario.svg", alt="")
+							.text Ao receber o produto da transportadora, <b class="azul">verifique se ele foi entregue dentro de 9 dias corridos</b>, que é o tempo de qualificação da embalagem. Haverá uma etiqueta colada na NF para facilitar essa visualização. 
+						.it
+							img.wow.zoomIn(src="../../assets/img/erro2.svg", alt="")
+							.text <b class="azul">Caso o prazo esteja excedido, recuse o recebimento</b>, uma vez que, se ultrapassado esse tempo, não podemos mais garantir a qualidade das AGs. Esse é um processo novo, portanto, atente-se aos próximos recebimentos deste produto.
+
+						.it
+							img.wow.zoomIn(src="../../assets/img/check2.svg", alt="")
+							.text <b class="azul">Caso esteja de acordo, cabe a você agora os cuidados de armazenamento</b> conforme orientações do último vídeo. Ou seja, um armazenamento em condições adequadas como nossos outros medicamentos. <b class="azul">Os cuidados especiais com o Qtern estão no transporte, sempre em embalagem especial de isopor com gelo</b>.
+
+				.text.text3.bold.branca 
+					| Para mais informações sobre o preparo e transporte do medicamento até os médicos, clique para acessar o <a href="https://az.app.box.com/file/1463706085669" class="link branca" target="_blank">'Guia de Orientação - Montagem das Caixas de Qtern'</a>.
+
+
+			section.sec5.wow.fadeInUp
+				//- img.bg.wow.fadeInRight(src="../../assets/img/sec4-img1.png", alt="")
+				
+				.containerTxt.wow.fadeInUp
+					h4 
+						| ROUBO, PERDA OU EXTRAVIO DE AMOSTRAS
+					img.sec-title.wow.zoomIn(src="../../assets/img/ladrao.svg", alt="")
+				
+				.info.wow.fadeInUp
+					
+					.text.text1.mt0_5
+						| No dia a dia com as amostras, situações indesejadas podem ocorrer, como extravios, <br>perda de medicamentos e, infelizmente, casos de furtos ou roubos.
+					.text.text1.mt0_5.azul
+						| <b>Esses problemas podem contribuir para falsificações, comércio clandestino ou uso<br> indevido dos medicamentos, colocando em risco a reputação da AstraZeneca e, <br>acima de tudo, a saúde dos nossos pacientes.</b>
+					.text.text1.mt0_5
+						| Portanto, é preciso de atenção às orientações e aos prazos estabelecidos, principalmente, <br>aos representantes. 
+					
+					.exercic02
+						h4
+							| <span class="bold azul">Qual o prazo de notificação no caso de extravio de amostras?</span>
+						.ques
+							.itq.itq1(it=0)
+								img.wow.zoomIn(src="../../assets/img/sec4-img-12.svg", alt="")
+							.itq.itq2(it=1)
+								img.wow.zoomIn(src="../../assets/img/sec4-img-14.svg", alt="")
+							.itq.itq3(it=0)
+								img.wow.zoomIn(src="../../assets/img/sec4-img-24.svg", alt="")
+							.itq.itq4(it=0)
+								img.wow.zoomIn(src="../../assets/img/sec4-img-72.svg", alt="")
+						.feedQues
+								img.feedImg.feedImgPos.wow.zoomIn(src="../../assets/img/sec4-img-pos.svg", alt="")
+								img.feedImg.feedImgNeg.wow.zoomIn(src="../../assets/img/sec4-img-neg.svg", alt="")
+
+					.infoBase.inativeB 
+						.baseX
+							img.sec-title.wow.zoomIn(src="../../assets/img/sec4-img-3.svg", alt="")
+							.text.text1.wow.fadeInUp.azul Esse é o tempo máximo que você tem para notificar nosso time por meio do grupo no Outlook: +BRCZ_ROUBOS_EXTRAVIOS_AGS
+				
+					.containerTx2.wow.fadeInUp.inativeB 
+						.text.text1.mt2_5
+							| <b class="azul">Em casos de furtos ou roubos</b>, além da notificação, <b class="azul">é obrigatório registrar um Boletim de Ocorrência Policial</b> com uma descrição detalhada do incidente, <b class="azul">incluindo o nome do produto, lote e quantidades subtraídas</b>, para que as autoridades competentes estejam cientes e possam tomar as devidas providências.
+						.text.text1.mt0_5
+							| <b class="azul">Também é mandatório enviar uma cópia deste boletim para o grupo +BRCZ_ROUBOS_EXTRAVIOS_AGS.</b> Caso o boletim de ocorrência policial não contenha todos os detalhes necessários, utilize o corpo do e-mail da sua notificação para adicionar as informações essenciais que serão utilizadas pelos nossos times internos.
+						.text.text1.text2.mt1
+							| <b class="azul">Lembre-se de que qualquer informação pode fazer uma diferença significativa na resolução do caso. Portanto, relate tudo o que lembrar!</b>
+					.blockColor.inativeB 
+						img.peopleTriste.wow.zoomIn(src="../../assets/img/peopleTriste.svg", alt="")
+						h4
+							| E se as amostras forem encontradas<br> após os procedimentos realizados?
+						.text
+							| Você deve informar imediatamente, ou no prazo máximo de 24 horas, <span class="bold">o grupo +BRCZ_ROUBOS_EXTRAVIOS_AGS no Outlook</span>.
+						.text
+							| No e-mail, descreva o nome do produto, lote e quantidades recuperadas, bem como qualquer outra informação pertinente.
+						.text
+							| Lembre-se de separar essas amostras das demais que você possui e aguarde orientações sobre como realizar a devolução para a AstraZeneca. <b>Estas amostras recuperadas, sob nenhuma hipótese, podem ser entregues aos médicos</b>.
+						
+					
+				.info.info2.wow.fadeInUp.inativeB 
+					img.sec-title.wow.zoomIn(src="../../assets/img/lampada.svg", alt="")
+					h2.azul Dicas importantes para minimizar os danos causados<br> pelo roubo ou perda de amostras:
+					.lit.mt1
+						.itx
+							.numb 1
+							.text.text1
+								| <span class="bold">Leve apenas as amostras que serão entregues naquele dia,</span><br><span class="bold">as demais, deixe-as em segurança em sua casa.</span>
+						.itx.mt0_5
+							.numb 2
+							.text.text1
+								| <span class="bold">Sempre que possível, estacione seu carro em estacionamentos.</span>
+						.itx.mt0_5
+							.numb 3
+							.text.text1
+								| <span class="bold">Se não houver estacionamento disponível, considere levar as amostras com</span><span class="bold"> você, não as deixe sozinhas no carro.</span>
+					.containerTxt2.wow.fadeInUp
+						img.sec-title.wow.zoomIn(src="../../assets/img/veneno.svg", alt="")
+						h4 
+							| Amostras Danificadas ou<br>Suspeitas de Falsificação
+					.lineX.wow.fadeInUp
+						.text.text1
+							| Ao notar qualquer tipo de dano nas amostras ou uma aparência diferente do padrão, sugerindo uma possível falsificação, informe imediatamente o SAC<br> pelo e-mail <a class="link" href="mailto:sac@astrazeneca.com">sac@astrazeneca.com</a>.
+						.text.text1.mt0_5
+							| <b class="azul">Não abra, manipule ou tente corrigir as avarias das amostras e, principalmente, não as distribua.</b>
+						.text.text1.mt0_5
+							| Nosso time de Qualidade é responsável pela identificação e procedência dos desvios, levando os casos aos times globais.
+						.text.text1.mt0_5
+							| <b class="azul">Portanto, nesses casos, aguarde as orientações sobre como proceder.</b>
+		
+			section.sec6.wow.fadeInUp.inativeB 
+
+				.containerTxt.wow.fadeInUp
+					img.sec-title.wow.zoomIn(src="../../assets/img/amostra.svg", alt="")
+				
+				.info.wow.fadeInUp
+					h4.azul Amostras Vencidas
+					.text.textB
+						| Nossas amostras, assim como todos os produtos, têm um prazo de validade<br> estabelecido, e <b>os pacientes não devem recebê-las com prazos vencidos</b>.<br> Portanto, as amostras devem ser entregues aos profissionais de saúde com uma<br> margem mínima de 3 meses antes do seu vencimento. Esse prazo mínimo é<br> necessário para que o produto cumpra seu percurso logístico e o médico possa<br> orientar um tratamento seguro para seus pacientes.
+					.line
+						img.bg.wow.zoomIn(src="../../assets/img/numero_3.svg", alt="")
+						.text.text1
+							| Se, por qualquer motivo, as amostras tiverem um prazo inferior a 3 meses, é necessário acionar o processo de logística reversa para que elas sejam devolvidas à AstraZeneca para destruição.
+					
+					.blockXD
+						img.wow.zoomIn(src="../../assets/img/processo.svg", alt="")
+						h4.azul PROCEDIMENTO PARA TRATATIVA DE AMOSTRAS VENCIDAS
+						.tedXD
+							.text • Alerte seu Gerente Distrital com as informações do produto, lote e quantidade.
+							.text • Aguarde orientações do operador logístico para a coleta dos medicamentos.
+						.text.azul.bold As amostras coletadas seguirão os procedimentos internos de destruição.
+				
+				.containerTxt.containerTxt2.wow.fadeInUp
+					img.sec-title.wow.zoomIn(src="../../assets/img/remedio.svg", alt="")
+				
+				.info.info2.wow.fadeInUp
+					.baseInfo
+						h4.azul Recall de amostras
+						.text.textB
+							| Esse é mais um processo importante<br> em nosso negócio.
+						.text.textB
+							| <b>Conheça-o em detalhes assistindo ao vídeo.</b>
+					.containerVideo.wow.zoomIn.delay1
+						video(src="../../assets/video/video3.mp4" controls controlsList="nodownload"  poster="../../assets/video/video3.png")
+
+					
+			section.sec9.wow.fadeInUp.inativeB#controlComplete
+				
+				.info
+					img.lapis(src="../../assets/img/lapis.svg", alt="")
+					.infoBase
+						.text Encerramos aqui o nosso treinamento, hora de testar <br>seus conhecimentos, são apenas cinco questões.<br> <b>Responda-as e confira o resultado</b>.
+						.liX 
+							img(src="../../assets/img/sobre.svg", alt="")
+							.text.roxo.bold Lembre-se de que você pode acessar à política completa <a href="https://az.app.box.com/file/875626531411" class="link roxo" target="_blank">clicando aqui</a>.
+							
+					
+					
+					.containerExercicio
+						.exercicioInit.exercicioInit1.mt2_5(correta=3)
+							.indice 1
+							.text.title.subtitulo
+									<span class="">Em relação ao Qtern, o que você deve verificar ao recebê-lo?</span>
+							.alters
+								.alter.alter1(res=0, indice=1)
+									.selector
+									.text.altTxt 
+										<span class="azul">Verificar as condições da embalagem.</span>
+								.alter.alter2(res=0, indice=2)
+									.selector
+									.text.altTxt 
+										<span class="azul">Verificar se ele está na temperatura correta.</span>
+								.alter.alter3(res=1, indice=3)
+									.selector
+									.text.altTxt 
+										<span class="azul">Verificar se na etiqueta do produto consta que ele foi entregue dentro dos 9 dias corridos referente a qualificação das embalagens.</span>
+								.alter.alter4(res=0, indice=4)
+									.selector
+									.text.altTxt 
+										<span class="azul">Não há nada para verificar, é um medicamento igual aos outros.</span>
+						
+						.exercicioInit.exercicioInit2.mt2_5(correta=4)
+							.indice 2
+							.text.title.subtitulo
+									<span class="">Onde as amostras devem ser armazenadas após seu recebimento?</span>
+							.alters
+								.alter.alter1(res=0, indice=1)
+									.selector
+									.text.altTxt 
+										<span class="azul">No carro, preferencialmente no porta-malas.</span>
+								.alter.alter2(res=0, indice=2)
+									.selector
+									.text.altTxt 
+										<span class="azul">Em um local limpo.</span>
+								.alter.alter3(res=0, indice=3)
+									.selector
+									.text.altTxt 
+										<span class="azul">Longe de materiais de limpeza, inseticidas, insetos e poluição.</span>
+								.alter.alter4(res=1, indice=4)
+									.selector
+									.text.altTxt 
+										<span class="azul">As alternativas 2 e 3 estão corretas.</span>
+						
+						.exercicioInit.exercicioInit3.mt2_5(correta=4)
+							.indice 3
+							.text.title.subtitulo
+									<span class="">No que se refere a qualidade das amostras:</span>
+							.alters
+								.alter.alter1(res=0, indice=1)
+									.selector
+									.text.altTxt 
+										<span class="azul">Elas simbolizam a imagem da AstraZeneca perante aos médicos.</span>
+								.alter.alter2.alterCustom(res=0, indice=2)
+									.selector
+									.text.altTxt 
+										<span class="azul">Sob condições inadequadas de armazenamento podem comprometer sua eficácia.</span>
+								.alter.alter3(res=0, indice=3)
+									.selector
+									.text.altTxt 
+										<span class="azul">Os times de campos são também responsáveis pelos seus cuidados.</span>
+								.alter.alter4(res=1, indice=4)
+									.selector
+									.text.altTxt 
+										<span class="azul">Todas alternativas estão corretas.</span>
+							
+						.exercicioInit.exercicioInit4.mt2_5(correta=3)
+							.indice 4
+							.text.title.subtitulo
+									<span class="">O que fazer em caso de roubo ou furto de amostras?</span>
+							.alters
+								.alter.alter1(res=0, indice=1)
+									.selector
+									.text.altTxt 
+										<span class="azul">Abrir um boletim de ocorrência na delegacia mais próxima.</span>
+								.alter.alter2(res=0, indice=2)
+									.selector
+									.text.altTxt 
+										<span class="azul">Informar ao GD.</span>
+								.alter.alter3.alterCustom(res=1, indice=3)
+									.selector
+									.text.altTxt 
+										<span class="azul">Informar ao grupo responsável na AstraZeneca (+BRCZ_ROUBOS_EXTRAVIOS_AGS) enviando o boletim de ocorrência aberto em até 24 horas</span>
+								.alter.alter4.alterCustom(res=0, indice=4)
+									.selector
+									.text.altTxt 
+										<span class="azul">Informar ao grupo responsável na AstraZeneca (+BRCZ_ROUBOS_EXTRAVIOS_AGS) imediatamente ao episódio, sem necessidade de abertura de boletim de ocorrência</span>
+							
+						.exercicioInit.exercicioInit5.mt2_5(correta=4)
+							.indice 5
+							.text.title.subtitulo
+									<span class="">Assinale a afirmativa correta relacionada ao recall de medicamentos:</span>
+							.alters
+								.alter.alter1.alterCustom(res=0, indice=1)
+									.selector
+									.text.altTxt 
+										<span class="azul">Trata-se de um processo mandatório que vale também para as amostras<br> grátis comercializadas</span>
+								.alter.alter2.alterCustom(res=0, indice=2)
+									.selector
+									.text.altTxt 
+										<span class="azul">O representante tem um prazo de 48 horas para enviar as informações solicitadas</span>
+								.alter.alter3.alterCustom(res=0, indice=3)
+									.selector
+									.text.altTxt 
+										<span class="azul">Trata-se de um processo válido apenas para os medicamentos comercializados.</span>
+								.alter.alter4(res=1 , indice=4)
+									.selector
+									.text.altTxt 
+										<span class="azul">Alternativas 1 e 2 estão corretas.</span>
+						
+						.btnConfrmar.mt1_5
+							| FINALIZAR
+						
+						.feed.feed-positivo1.mt1_5.wow.fadeIn
+							.textBase
+								.text
+									| <span class="bold azul">Parabéns! Você assimilou todo o conteúdo! Siga em frente e bom trabalho!</span>
+						
+						.feed.feed-positivo2.mt1_5.wow.fadeIn
+							.textBase
+								.text
+									| <span class="bold azul">Uma questão errada! Veja com atenção qual seria a resposta correta e bom trabalho!</span>
+						
+						.feed.feed-negativo.mt1_5.wow.fadeIn
+							.textBase
+								.text
+									| <span class="bold branca">Hum, melhor rever esse conteúdo. Esfrie a cabeça e, mais tarde, tente novamente!</span>
+			
+
+block scripts
+	script(src="../../vendor/wow.min.js")
+	script(src="script.js")
