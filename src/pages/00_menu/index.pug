@@ -10,34 +10,26 @@ block body
 
 		.body
 			section.sec1
-				//- img.bg.wow.fadeInLeft(src="../../assets/img/sec1a.png", alt="")
-				img.logo.animated.fadeInUp(src="../../assets/img/logo.svg", alt="")
 
-				.base.animated.fadeInUp.delay1
-					h1
-						| Treinamento Anual
-					.block01
-						.text.text1
-							| Procedimentos e Cuidados com
-						.text.text2
-							| Amostras Grátis de Medicamentos
-					.block02
-						.text.text1
-							| <span class="bold">Olá!</span>
-						.text.text1.mt0_5 A fim de otimizar o seu tempo durante este treinamento e passar apenas as informações necessárias para sua atual função nesse momento, pedimos que identifique sua posição para seguirmos com o conteúdo específico.
-					
+				.baseTop.animated.fadeInDown
+					img.logo.animated.fadeInUp.delay1(src="../../assets/img/logo2.svg", alt="")
 
-					img.menuImg(src="../../assets/img/menu01.svg", alt="")
-
+				.base
+					.baseCenter.animated.fadeInUp.delay2
+						h1 Treinamento Anual
+						p Procedimentos e Cuidados com Amostras Grátis de Medicamentos
+					.subBase.animated.fadeInUp.delay3
+						h2 IDENTIFIQUE SUA POSIÇÃO
+			
 					.menuListX
-						.it.it1(onclick="navigate.goto('01_tela')")
+						.it.it1.animated.zoomIn.delay4(onclick="navigate.goto('01_tela')")
 							| Representante
-						.it.it2(onclick="navigate.goto('02_tela')")
+						.it.it2.animated.zoomIn.delay5(onclick="navigate.goto('02_tela')")
 							| GERENTE DISTRITAL
-						.it.it3(onclick="navigate.goto('03_tela')")
-							| Gerente de Produto<br> OU ANALISTA DE MARCA
-						.it.it4(onclick="navigate.goto('04_tela')")
-							| Outra posição<br> ADMINISTRATIVA
+						.it.it3.animated.zoomIn.delay6(onclick="navigate.goto('03_tela')")
+							| Gerente de Produto<br> Analista ou<br> Coordenador de Marca
+						.it.it4.animated.zoomIn.delay7(onclick="navigate.goto('04_tela')")
+							| Outras Funções
 					
 
 block scripts

@@ -70,8 +70,8 @@ function dragdrop() {
     _template.find(".alert").css("display", "none");
 
     ///randomizar arrastes
-    _template.find(".itCons").html(
-      _template.find(".itCons .itContainer").sort(function () {
+    _template.find(".contCons").html(
+      _template.find(".contCons .contContainer").sort(function () {
         return Math.random() - 0.5;
       })
     );
