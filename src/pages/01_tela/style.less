@@ -137,8 +137,9 @@ body {
   text-decoration: underline;
 }
 
+li,
 .text{
-  font-size: 1em;
+  font-size: 1.2em;
   line-height: 1.5;
   color: #231F20;
   z-index: 1;
@@ -325,7 +326,7 @@ section{
           color: #fff;
         }
   
-        p {
+        .text {
           margin-top: 0.2rem;
           color: #fff;
         }
@@ -700,7 +701,8 @@ section{
   .info {
     position: relative;
     background-color: #fff;
-    width: 55em;
+    width: 61em;
+    min-height: 55rem;
     left: 5em;
     padding: 2em;
     padding-top: 7em;
@@ -749,7 +751,7 @@ section{
 
     .sec2_block02 {
       position: relative;
-      width: 117%;
+      width: 116%;
       height: 6rem;
       top: 0;
       left: -13%;
@@ -761,30 +763,30 @@ section{
       align-items: flex-start;
       z-index: 2;
       margin-top: 2rem;
-  
-        h4 {
-          position: relative;
-          z-index: 2;
-          color: #fff;
-          font-weight: 400;
-          font-size: 1.6em;
-          line-height: 1.8em;
-          padding: 0;
-          margin: 0;
-  
-          &.prop-l1 {
-            margin-left: 6em;
-          }
+
+      h4 {
+        position: relative;
+        z-index: 2;
+        color: #fff;
+        font-weight: 400;
+        font-size: 1.6em;
+        line-height: 1.8em;
+        padding: 0;
+        margin: 0;
+
+        &.prop-l1 {
+          margin-left: 6em;
         }
+      }
     }
 
-    .baseSed{
+    .baseSed {
       position: relative;
       padding-left: 3rem;
       width: 65%;
       z-index: 10;
 
-      .destaqueX{
+      .destaqueX {
         background-color: #fcea0d;
         color: #00365f;
         font-weight: bold;
@@ -795,13 +797,15 @@ section{
       position: absolute;
       width: 20em;
       height: 32.5em;
+      -o-object-fit: contain;
       object-fit: contain;
-      top: -7.5em;
-      right: -24em;
+      top: -7.8em;
+      right: -23em;
     }
 
     .line {
       padding-left: 7.5rem;
+      padding-right: 5rem;
 
       .infoSeta {
         position: relative;
@@ -846,15 +850,15 @@ section{
       object-fit: contain;
     }
 
-    .lineExerc{
+    .lineExerc {
       padding-left: 2rem;
 
-      .textInfo{
+      .textInfo {
         width: 70%;
         margin-left: 3rem;
       }
 
-      .ques{
+      .ques {
         display: flex;
         position: relative;
         width: 100%;
@@ -862,16 +866,16 @@ section{
         align-items: center;
         gap: 2rem;
 
-        .itq{
+        .itq {
           display: flex;
           position: relative;
           justify-content: center;
           align-items: center;
           gap: 0.2rem;
 
-          &.itPos{
+          &.itPos {
             .circ {
-              &::before{
+              &::before {
                 position: relative;
                 content: '';
                 width: 1rem;
@@ -895,7 +899,7 @@ section{
             }
           }
 
-          .circ{
+          .circ {
             position: relative;
             width: 2rem;
             height: 2rem;
@@ -908,7 +912,7 @@ section{
             align-items: center;
           }
 
-          .val{
+          .val {
             position: relative;
             color: #00365f;
             font-weight: bold;
@@ -918,8 +922,8 @@ section{
       }
     }
   }
-  
-  .alertInf{
+
+  .alertInf {
     position: relative;
     width: 100%;
     padding: 2rem 2rem;
@@ -929,7 +933,7 @@ section{
     color: #00365f;
     z-index: 10;
 
-    &::before{
+    &::before {
       position: absolute;
       content: '';
       width: 10rem;
@@ -939,7 +943,7 @@ section{
       background-size: contain;
       background-repeat: no-repeat;
       left: -6.5rem;
-      top: 2rem; 
+      top: 2rem;
     }
 
   }
@@ -981,7 +985,6 @@ section{
       position: absolute;
       width: 15em;
       height: 15em;
-      -o-object-fit: contain;
       object-fit: contain;
       top: -5em;
       left: -6em;
@@ -990,7 +993,7 @@ section{
 
     .sec2_block01 {
       position: absolute;
-      width: 105.7%;
+      width: 111%;
       height: 6rem;
       top: 0;
       left: 0;
@@ -1274,7 +1277,7 @@ section{
       height: 30em;
       object-fit: contain;
       top: -5em;
-      right: -6em;
+      right: -9em;
       z-index: 5;
     }
 
@@ -1360,7 +1363,7 @@ section{
 
     .sec2_block01 {
       position: absolute;
-      width: 105.7%;
+      width: 111%;
       height: 6rem;
       top: 0;
       left: 0;
@@ -1478,11 +1481,11 @@ section{
 
     .sec2_01_img {
       position: absolute;
-      width: 22em;
-      height: 30em;
+      width: 23em;
+      height: 35em;
       object-fit: contain;
-      top: -2.79em;
-      right: -6em;
+      top: -4.77em;
+      right: -9em;
       z-index: 5;
     }
 
@@ -1526,7 +1529,7 @@ section{
       padding: 1rem;
       color: #fff;
       position: relative;
-      width: 90%;
+      width: 100%;
       margin-left: 10%;
 
       .text{
@@ -1560,7 +1563,7 @@ section{
   .info {
     position: relative;
     background-color: #d9e0de;
-    width: 58em;
+    width: 61em;
     left: 5em;
     padding: 2em;
     padding-top: 7em;
@@ -1770,6 +1773,7 @@ section{
       padding-left: 3rem;
       font-weight: bold;
       color: #00365f;
+      font-size: 1.2rem;
 
       &::after{
         position: absolute;
@@ -1843,7 +1847,7 @@ section{
   .confirmar{
     position: relative;
     cursor: pointer;
-    font-size: 1em;
+    font-size: 1.5em;
     color: #003660;
     font-weight: 500;
     margin: 0 auto;

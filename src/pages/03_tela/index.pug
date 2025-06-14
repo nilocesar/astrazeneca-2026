@@ -10,203 +10,141 @@ block body
 
 		.body
 			section.sec1
-				img.logo.wow.fadeInUp(src="../../assets/img/logo.svg", alt="")
-				.titulo.wow.fadeInRight.btnVoltar 
-					button  <i class="fa fa-chevron-circle-left" aria-hidden="true"></i>
-					| <span>Gerente de Produto OU ANALISTA DE MARCA</span>
+				.baseTop.animated.fadeInDown
+					.titulo.wow.fadeInRight.btnVoltar 
+						button  <i class="fa fa-chevron-circle-left" aria-hidden="true"></i>
+						| <span>Gerente de Produto, Analista ou Coordenador de Marca</span>
+					img.logo.wow.zoomIn(src="../../assets/img/logo2.svg", alt="")
 				
-				.containerTxt.wow.fadeInUp
-					.text.azul 
-						| Bem-vindo ao Treinamento Anual sobre Procedimentos e Cuidados Essenciais na Distribuição de Amostras Grátis de Medicamentos para uma breve atualização dos seus conhecimentos.
-					.text.text1.azul.bold 
-						| <b>Convidamos você, Gerente de Produto ou Analista de Marca, para uma breve atualização dos seus conhecimentos. São informações importantes uma vez que as amostras grátis representam parte de nossa reputação e posicionamento diante do mercado farmacêutico.</b>
-					.text.text1.mt0_5.azul 
-						| Ao final, teste seus conhecimentos participando do nosso quiz.
-					.text.text1.mt1.azul.ml 
-						| Para começar, assista ao vídeo que destaca a<br> importância das amostras grátis no nosso setor.
-					.text.text1.mt1_5.roxo.ml 
-						| <b class="roxo">Basta dar play, bons estudos!</b>
-					img.wow.zoomIn.tela01_01(src="../../assets/img/tela01_01.svg", alt="")
-
-				.containerVideo.wow.zoomIn.delay1
-						video(src="../../assets/video/video1.mp4" controls controlsList="nodownload"  poster="../../assets/video/video1.png")
-
+				.base
+					.baseCenter.animated.fadeInUp.delay2
+						h1 Treinamento Anual
+						.text Procedimentos e Cuidados com Amostras Grátis de Medicamentos
+					
 				
+					.containerTxt.wow.fadeInUp.delay3
+						.text 
+							| Bem-vindo ao nosso <b>Treinamento Anual sobre Procedimentos e Cuidados Essenciais na Distribuição de Amostras Grátis de Medicamentos!</b> Este é o momento ideal para atualizar seus conhecimentos de forma prática e objetiva.
+						.text.text1.mt1.azul.bold 
+							| Para a sua posição, as informações desse treinamento oferecem uma visão geral das amostras que poderão auxiliar na definição das quantidades que deverão ser faturadas.
+						.text.text1.mt1 
+							| Além disso, as amostras grátis desempenham um papel fundamental em nossa reputação e posicionamento, tornando indispensável compreender os procedimentos, cuidados e melhores práticas em sua distribuição.
+						.text.text1.mt1
+							| Ao final, coloque seu aprendizado à prova no nosso quiz!
+						.text.text1.mt1.azul.bold 
+							| Para iniciar, assista ao vídeo que ressalta a importância das amostras grátis no setor.
+						.text.text1.mt1.azul.bold 
+							| Bons estudos!
+						.player
+							button.openModal.pulse(mod="modalGeral1") 
+								img.wow.zoomIn(src="../../assets/img/2025/btnPlay01.svg", alt="")
+						img.setas.wow.fadeInDown.delay4(src="../../assets/img/2025/setas.png", alt="")
 			
-
+			.modalBase.modalGeral.modalGeral1.wow.fadeIn
+				.modalBaseData
+					video(src="../../assets/video/video1.mp4" controls controlsList="nodownload"  poster="../../assets/video/video1.png")
+					button.close-btn.modal-close.pulse 
+						img.wow.zoomIn(src="../../assets/img/close.svg", alt="")
+							
+						
 			section.sec5.wow.fadeInUp
-				
-				.containerTxt.wow.fadeInUp
-					h4 Composição da quantidade de amostras trabalhadas
-					h4.prop-l1 Responsável: Gerente de Produto/ANALISTA DE MARCA
-					img.sec-title.wow.zoomIn(src="../../assets/img/calculadora.svg", alt="")
-				
 				.info.wow.fadeInUp
-					
-					.text.text1.mt0_5
-						| O controle da quantidade de amostras a serem distribuídas é essencial<br> dentro do nosso processo para evitar faturamentos desnecessários<br> e alocação indevida desse recurso com impacto financeiro.
-					.text.text1.mt0_5.azul
-						| <b>Portanto, é sua responsabilidade:</b>
-					.litd.mt1
-						img.sec-title.wow.zoomIn(src="../../assets/img/peopleRoxo.svg", alt="")
-						.text.text1
-							| No <b>sistema Veeva CRM</b>, revisar o saldo disponível analisando o ciclo atual -1 por representante. Com a determinação da quantidade, as amostras são enviadas para a residência dos colaboradores após o faturamento.
-					.text.text1.mt1_5.azul
-						| <b><a class="link azul" href="https://az.app.box.com/file/928750110866?s=h9b17h06t4hzb9fvdvdg8qm3ktkkf67q" target="_black">Clique</a> para conferir os limites máximos por apresentação para os produtos da linha de CVRM.</b>
-					.text.text1.mt0_5
-						| Após o faturamento, as amostras são despachadas para a residência do Representante,<br>que deve confirmar o recebimento no sistema Veeva CRM.
+					.sec2_block01.wow.fadeInUp
+						h3.prop-l1
+							| Composição da quantidade de amostras trabalhadas
+						.list
+							.text RESPONSÁVEIS:
+							.baseT
+								.text GERENTE DE PRODUTO
+								.text ANALISTA DE MARCA
+								.text COORDENADOR DE MARCA
 						
-					
-				.containerTxt.wow.fadeInUp
-					h4 
-						| ROUBO, PERDA OU EXTRAVIO DE AMOSTRAS
-					img.sec-title.wow.zoomIn(src="../../assets/img/ladrao.svg", alt="")
-				
-				.info.wow.fadeInUp
-					
-					.text.text1.mt0_5
-						| No dia a dia com as amostras, situações indesejadas podem ocorrer, como extravios,<br> perda de medicamentos e, infelizmente, casos de furtos ou roubos.
-					.text.text1.mt0_5.azul
-						| <b>Esses problemas podem contribuir para falsificações, comércio clandestino ou uso<br> indevido dos medicamentos, colocando em risco a reputação da AstraZeneca e, <br>acima de tudo, a saúde dos nossos pacientes.</b>
-					.text.text1.mt0_5
-						| Nossos representantes, claro, estão mais sujeitos a essas ocorrências, mas é <br>importante que saiba apenas que temos rigorosos procedimentos que devem <br>ser seguidos por eles e também por nossos GDs.
-					
-					
-					.blockColor 
-						img.peopleTriste.wow.zoomIn(src="../../assets/img/peopleTriste.svg", alt="")
-						.text
-							| Sobre esse tema ainda, pode ocorrer a localização ou recuperação das amostras. É importante que saiba que, <b>amostras recuperadas, sob nenhuma hipótese, podem ser entregues aos médicos</b>. Elas passarão por um processo de logística reversa para destruição na AstraZeneca.
-				
-			section.sec6.wow.fadeInUp 
+					img.wow.zoomIn.sec2_01_img(src="../../assets/img/2025/sec12.png", alt="")
 
-				.containerTxt.containerTxt2.wow.fadeInUp
-					img.sec-title.wow.zoomIn(src="../../assets/img/remedio.svg", alt="")
-					
+					.line.wow.fadeInUp
+						.text
+							| O controle adequado da quantidade de amostras distribuídas é fundamental para garantir eficiência no processo, evitando faturamentos desnecessários e a alocação incorreta de recursos, o que pode gerar impacto financeiro para a AstraZeneca.
+						.blocD
+							img.wow.zoomIn.sec2_02_img(src="../../assets/img/2025/sec12b.png", alt="")
+							.text.bold Por isso, é sua responsabilidade:
+							.text No sistema <b class="azul">Veeva CRM</b>, revisar o saldo disponível, considerando o ciclo atual -1 por representante.
+							
+						.subS
+							img.wow.zoomIn.sec2_03_img(src="../../assets/img/2025/sec12c.png", alt="")
+							.text Após a definição da quantidade, as amostras são faturadas e enviadas para a residência dos colaboradores.
+							.text.mt1.bold.azul <a href="" target="_blank">Confira</a> os limites máximos por apresentação para os produtos. 
+							.text.mt1 Após o faturamento, as amostras seguem para a residência do Representante, que deve registrar a confirmação de recebimento no sistema Veeva CRM.
+
+
+
+			section.sec3.wow.fadeInUp
 				
-				.info.info2.wow.fadeInUp
-					.baseInfo
-						h4.azul Recall de amostras
-						.text.textB
-							| Esse é mais um processo importante<br> em nosso negócio.
-						.text.textB
-							| <b>Conheça-o em detalhes assistindo ao vídeo.</b>
-					.containerVideo.wow.zoomIn.delay1
-						video(src="../../assets/video/video3.mp4" controls controlsList="nodownload"  poster="../../assets/video/video3.png")
+				.info.wow.fadeInUp
+					.sec2_block01.wow.fadeInUp
+						h4.prop-l1
+							| Roubo, perda ou extravio de amostras
+					img.wow.zoomIn.sec2_01_img(src="../../assets/img/2025/sec05.png", alt="")
+
+					.line.wow.fadeInUp
+						.text
+							| No manuseio diário das amostras, podem surgir imprevistos como extravios, perdas de medicamentos e, infelizmente, casos de furtos ou roubos.
+						.text.mt1_5 Essas ocorrências podem favorecer falsificações, comércio ilegal e uso indevido dos medicamentos, o que pode comprometer não apenas a reputação da AstraZeneca, mas, principalmente, a segurança e o bem-estar dos pacientes.
+						.text.bold.azul.mt1_5 Por isso, é essencial seguir rigorosamente as orientações e os prazos estabelecidos, com atenção especial para você que atua como representante.
+						.lineExerc.mt1_5.wow.fadeInUp
+							h3.bold.roxo
+								| Você sabe dizer qual o prazo de notificação no caso de extravio de amostras?
 			
-		
-				
-					
-			section.sec9.wow.fadeInUp#controlComplete
-				
-				.info
-					img.lapis(src="../../assets/img/lapis.svg", alt="")
-					.infoBase
-						.text Encerramos aqui o nosso treinamento, hora de testar <br>seus conhecimentos, são apenas quatro questões.<br> <b>Responda-as e confira o resultado</b>.
-						.liX 
-							img(src="../../assets/img/sobre.svg", alt="")
-							.text.roxo.bold Lembre-se de que você pode acessar à política completa <a href="https://az.app.box.com/file/875626531411" class="link roxo" target="_blank">clicando aqui</a>.
+							.exercic02.wow.fadeInUp
+								.ques
+									.itq.itq1(it=0)
+										.circ
+										.val 12h
+									.itq.itq2(it=1)
+										.circ
+										.val 24h
+									.itq.itq3(it=0)
+										.circ
+										.val 48h
+									.itq.itq4(it=0)
+										.circ
+										.val 72h
+
+								.feedQues.mt1_5.wow.fadeInUp
+									.text.feedImg.feedImgPos
+										| <b class="verde">Correto!</b> Esse é o prazo máximo para notificar qualquer extravio de amostras. Claro, o quanto antes notificar será benefício para todos.
+									.text.feedImg.feedImgNeg
+										| <b class="vermelho">Errado!</b> O prazo máximo para notificar qualquer extravio de amostras são de <b>24h</b>. Claro, o quanto antes notificar será benefício para todos.
 							
-					
-					
-					.containerExercicio
-						.exercicioInit.exercicioInit1.mt2_5(correta=3)
-							.indice 1
-							.text.title.subtitulo
-									<span class="">Por que é importante o controle das quantidades de amostras junto aos representantes?</span>
-							.alters
-								.alter.alter1(res=0, indice=1)
-									.selector
-									.text.altTxt 
-										<span class="azul">Para evitar o risco de extravios</span>
-								.alter.alter2(res=0, indice=2)
-									.selector
-									.text.altTxt 
-										<span class="azul">Para evitar a deterioração e vencimento das amostras</span>
-								.alter.alter3(res=1, indice=3)
-									.selector
-									.text.altTxt 
-										<span class="azul">Para evitar faturamentos desnecessários e alocação de recursos financeiros.</span>
-								.alter.alter4(res=0, indice=4)
-									.selector
-									.text.altTxt 
-										<span class="azul">Para reduzir o risco de falsificações.</span>
+							.baseXSSD.inativeB 
+								.alertInf.mt1_5 A notificação deve ocorrer pelo grupo no Outlook:<br> +BRCZ_ROUBOS_EXTRAVIOS_AGS
+								.text.mt1_5 <b class="roxo">Em casos de furtos ou roubos</b>, além da notificação, <b>é obrigatório registrar um Boletim de Ocorrência Policial</b> com uma descrição detalhada do incidente, incluindo o nome do produto, lote e quantidades subtraídas, para que as autoridades competentes estejam cientes e possam tomar as devidas providências.
+								.text.mt1_5 <b>Também é mandatório enviar uma cópia deste boletim para o grupo +BRCZ_ROUBOS_EXTRAVIOS_AGS</b>. Caso o boletim de ocorrência policial não contenha todos os detalhes necessários, utilize o corpo do e-mail da sua notificação para adicionar as informações essenciais que serão utilizadas pelos nossos times internos.
+								.text.textInfo.mt1_5.bold.roxo Lembre-se de que qualquer informação pode fazer uma diferença significativa na resolução do caso. Portanto, <br>relate tudo o que lembrar!
 						
-						.exercicioInit.exercicioInit2.mt2_5(correta=4)
-							.indice 2
-							.text.title.subtitulo
-									<span class="">No que se refere a qualidade das amostras:</span>
-							.alters
-								.alter.alter1(res=0, indice=1)
-									.selector
-									.text.altTxt 
-										<span class="azul">Elas simbolizam a imagem da AstraZeneca perante aos médicos.</span>
-								.alter.alter2(res=0, indice=2)
-									.selector
-									.text.altTxt 
-										<span class="azul">Sob condições inadequadas de armazenamento podem comprometer sua eficácia.</span>
-								.alter.alter3(res=0, indice=3)
-									.selector
-									.text.altTxt 
-										<span class="azul">Os times de campos são também responsáveis pelos seus cuidados.</span>
-								.alter.alter4(res=1, indice=4)
-									.selector
-									.text.altTxt 
-										<span class="azul">Todas alternativas estão corretas.</span>
-						
-						.exercicioInit.exercicioInit3.mt2_5(correta=2)
-							.indice 3
-							.text.title.subtitulo
-									<span class="">É responsabilidade o Gerente de Produto ou Analista de Marca a determinação da quantidade de amostras a serem distribuídas na linha CVRM:</span>
-							.alters
-								.alter.alter1(res=1, indice=1)
-									.selector
-									.text.altTxt 
-										<span class="azul">Verdadeiro.</span>
-								.alter.alter2.alterCustom(res=0, indice=2)
-									.selector
-									.text.altTxt 
-										<span class="azul">Falso.</span>
-								
-						.exercicioInit.exercicioInit4.mt2_5(correta=3)
-							.indice 4
-							.text.title.subtitulo
-									<span class="">Assinale a afirmativa correta relacionada ao recall de medicamentos:</span>
-							.alters
-								.alter.alter1(res=0, indice=1)
-									.selector
-									.text.altTxt 
-										<span class="azul">Trata-se de um processo mandatório que vale também para as amostras <br>grátis comercializadas.</span>
-								.alter.alter2(res=0, indice=2)
-									.selector
-									.text.altTxt 
-										<span class="azul">Trata-se de uma oportunidade de testar nossa agilidade e garantir que todos <br>saibam o que fazer.</span>
-								.alter.alter3.alterCustom(res=0, indice=3)
-									.selector
-									.text.altTxt 
-										<span class="azul">Trata-se de um processo válido apenas para os medicamentos comercializados.</span>
-								.alter.alter4.alterCustom(res=1, indice=4)
-									.selector
-									.text.altTxt 
-										<span class="azul">Alternativas 1 e 2 estão corretas.</span>
-							
-						
-						.btnConfrmar.mt1_5
-							| FINALIZAR
-						
-						.feed.feed-positivo1.mt1_5.wow.fadeIn
-							.textBase
-								.text
-									| <span class="bold azul">Parabéns! Você assimilou todo o conteúdo! Siga em frente e bom trabalho!</span>
-						
-						.feed.feed-positivo2.mt1_5.wow.fadeIn
-							.textBase
-								.text
-									| <span class="bold azul">Uma questão errada! Veja com atenção qual seria a resposta correta e bom trabalho!</span>
-						
-						.feed.feed-negativo.mt1_5.wow.fadeIn
-							.textBase
-								.text
-									| <span class="bold branca">Hum, melhor rever esse conteúdo. Esfrie a cabeça e, mais tarde, tente novamente!</span>
+					.sec2_block02.wow.fadeInUp.inativeB 
+						h4.prop-l1
+							| E se as amostras forem encontradas após<br> os procedimentos realizados?
+					.baseSed.inativeB.wow.fadeInUp 
+						.text.mt1_5.azul.bold Você deve informar imediatamente, ou no prazo máximo de 24 horas, o grupo +BRCZ_ROUBOS_EXTRAVIOS_AGS no Outlook.
+						.text.mt1_5 No e-mail, descreva o nome do produto, lote e quantidades recuperadas, bem como qualquer outra informação pertinente.
+						.text.mt1_5 Lembre-se de separar essas amostras das demais que você possui e aguarde orientações sobre como realizar a devolução para a AstraZeneca. <span class="destaqueX">Estas amostras recuperadas, sob nenhuma hipótese, podem ser entregues aos médicos.</span>
+						img.wow.zoomIn.sec2_02_img(src="../../assets/img/2025/sec06.png", alt="")
+
+			
+			section.sec8.wow.fadeInUp.inativeB#controlComplete
+				
+				.info.wow.fadeInUp
+					.sec2_block01.wow.fadeInUp
+						h4.prop-l1
+							| <i>Recall</i> de amostras
+					img.wow.zoomIn.sec2_01_img(src="../../assets/img/2025/sec11.png", alt="")
+
+					.line.wow.fadeInUp
+						.text
+							| Assista ao vídeo e conheça em detalhes mais desse importante<br> processo no nosso trato com as amostras.
+						.containerVideo.wow.zoomIn.delay1
+							video(src="../../assets/video/video3.mp4" controls controlsList="nodownload"  poster="../../assets/video/video3.png")
+
 			
 
 block scripts

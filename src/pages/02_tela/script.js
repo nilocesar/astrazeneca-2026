@@ -21,6 +21,7 @@ function modal() {
     $("html").css("overflow-y", "hidden");
   });
 
+  $(".modalGeral").css("display", "none");
   $(".modalGeral .modal-close").on("click", function () {
     $(".modalGeral").css("display", "none");
     $("html").css("overflow-y", "auto");
@@ -69,6 +70,7 @@ function dragdrop() {
     _template.find(".feed").css("display", "none");
     _template.find(".alert").css("display", "none");
 
+    ///randomizar arrastes
     ///randomizar arrastes
     _template.find(".contCons").html(
       _template.find(".contCons .contContainer").sort(function () {

@@ -21,6 +21,7 @@ function modal() {
     $("html").css("overflow-y", "hidden");
   });
 
+  $(".modalGeral").css("display", "none");
   $(".modalGeral .modal-close").on("click", function () {
     $(".modalGeral").css("display", "none");
     $("html").css("overflow-y", "auto");
@@ -70,8 +71,9 @@ function dragdrop() {
     _template.find(".alert").css("display", "none");
 
     ///randomizar arrastes
-    _template.find(".itCons").html(
-      _template.find(".itCons .itContainer").sort(function () {
+    ///randomizar arrastes
+    _template.find(".contCons").html(
+      _template.find(".contCons .contContainer").sort(function () {
         return Math.random() - 0.5;
       })
     );
@@ -161,10 +163,10 @@ function quiz() {
       });
 
       var _feed = null;
-      if (res == 3) {
+      if (res == 5) {
         _feed = $(".containerExercicio .feed-positivo1");
         $(".containerExercicio .feed-positivo1").css("display", "flex");
-      } else if (res == 2) {
+      } else if (res == 4) {
         _feed = $(".containerExercicio .feed-positivo2");
         $(".containerExercicio .feed-positivo2").css("display", "flex");
       } else {
