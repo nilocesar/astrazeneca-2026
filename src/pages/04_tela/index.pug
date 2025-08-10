@@ -6,10 +6,14 @@ block styles
 block body
 
 		.header
+		.loaderBase
+			.lds-eclipse
+				.spinner
+				.spinner.reverse
 			
 
 		.body
-			section.sec1
+			section#local1.sec1.local.local1(local=1)
 				.baseTop.animated.fadeInDown
 					.titulo.wow.fadeInRight.btnVoltar 
 						button  <i class="fa fa-chevron-circle-left" aria-hidden="true"></i>
@@ -46,7 +50,7 @@ block body
 							
 						
 
-			section.sec3.wow.fadeInUp
+			section#local2.sec3.wow.fadeInUp.local.local2.inativeIn(local=2)
 				
 				.info.wow.fadeInUp
 					.sec2_block01.wow.fadeInUp
@@ -65,16 +69,16 @@ block body
 			
 							.exercic02.wow.fadeInUp
 								.ques
-									.itq.itq1(it=0)
+									.itq.itq1(it=0, ques=1)
 										.circ
 										.val 12h
-									.itq.itq2(it=1)
+									.itq.itq2(it=1, ques=2)
 										.circ
 										.val 24h
-									.itq.itq3(it=0)
+									.itq.itq3(it=0, ques=3)
 										.circ
 										.val 48h
-									.itq.itq4(it=0)
+									.itq.itq4(it=0, ques=4)
 										.circ
 										.val 72h
 
@@ -101,7 +105,7 @@ block body
 						img.wow.zoomIn.sec2_02_img(src="../../assets/img/2025/sec06.png", alt="")
 
 			
-			section.sec8.wow.fadeInUp.inativeB
+			section#local8.sec8.wow.fadeInUp.inativeB.local.local8(local=8)
 				
 				.info.wow.fadeInUp
 					.sec2_block01.wow.fadeInUp
@@ -115,7 +119,7 @@ block body
 						.containerVideo.wow.zoomIn.delay1
 							video(src="../../assets/video/video3.mp4" controls controlsList="nodownload"  poster="../../assets/video/video3.png")
 
-			section.sec12.wow.fadeInUp.inativeB#controlComplete
+			section#local12.sec12.wow.fadeInUp.inativeB.local.local7(local=12)
 				
 				.info.wow.fadeInUp
 					.sec2_block01.wow.fadeInUp
@@ -127,10 +131,10 @@ block body
 						
 						.infoSeta
 							img(src="../../assets/img/2025/sec02_setas.svg", alt="")
-							.text.azul Arraste os números para associar corretamente cada texto à imagem que representa uma situação de risco — provável ou evidente — no cuidado, armazenamento ou manuseio das nossas amostras grátis.
+							.text.azul.arrasteInfo Arraste os números para associar corretamente cada texto à imagem que representa uma situação de risco — provável ou evidente — no cuidado, armazenamento ou manuseio das nossas amostras grátis.
 							
 
-					.arrasteExercicio.arrasteExercicio5.wow.fadeInUp(arraste=5)
+					.arrasteExercicio.arrasteExercicio5.wow.fadeInUp(arraste=5, exer=1, end=1)
 						.arrasteExercicioBase
 							.itCons
 								.itContainer
@@ -157,20 +161,20 @@ block body
 
 							.contCons
 								.contContainer
-									.cont.dragDrop_element(alvo=1)
-										img(src="../../assets/img/2025/sec13e.png", alt="")
+									.cont.dragDrop_element(alvo=5)
+										img(src="../../assets/img/2025/sec13d.png", alt="")
 								.contContainer
 									.cont.dragDrop_element(alvo=2)
 										img(src="../../assets/img/2025/sec13a.png", alt="")
 								.contContainer
-									.cont.dragDrop_element(alvo=3)
-										img(src="../../assets/img/2025/sec13c.png", alt="")
-								.contContainer
 									.cont.dragDrop_element(alvo=4)
 										img(src="../../assets/img/2025/sec13b.png", alt="")
 								.contContainer
-									.cont.dragDrop_element(alvo=5)
-										img(src="../../assets/img/2025/sec13d.png", alt="")
+									.cont.dragDrop_element(alvo=1)
+										img(src="../../assets/img/2025/sec13e.png", alt="")
+								.contContainer
+									.cont.dragDrop_element(alvo=3)
+										img(src="../../assets/img/2025/sec13c.png", alt="")
 								
 										
 
@@ -186,6 +190,8 @@ block body
 							img(src="../../assets/img/2025/sec02_neg.svg", alt="")
 							.text.text4
 								| <span class="bold vermelho">Humm... teve alguns erros :(. Dê uma olhada na ordem correta.</span>
+						
+						.infoFinish.wow.fadeInUp.delay2 Você concluiu o Treinamento Anual de Amostras Grátis.
 						
 						
 				

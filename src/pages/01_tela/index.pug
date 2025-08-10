@@ -6,10 +6,13 @@ block styles
 block body
 
 		.header
-			
+		.loaderBase
+			.lds-eclipse
+				.spinner
+				.spinner.reverse
 
 		.body
-			section.sec1
+			section#local1.sec1.local.local1(local=1)
 				.baseTop.animated.fadeInDown
 					.titulo.wow.fadeInRight.btnVoltar 
 						button  <i class="fa fa-chevron-circle-left" aria-hidden="true"></i>
@@ -53,7 +56,7 @@ block body
 			
 				
 			//- .secRef
-			section.sec2.wow.fadeInUp
+			section#local2.sec2.atB.at01.local.local2(local=2)
 				
 				.info.wow.fadeInUp
 					.sec2_block01.wow.fadeInUp
@@ -68,10 +71,10 @@ block body
 
 						.infoSeta
 							img(src="../../assets/img/2025/sec02_setas.svg", alt="")
-							.text.azul Arraste os números colocando os procedimentos na ordem correta:
+							.text.azul.arrasteInfo Arraste os números colocando os procedimentos na ordem correta:
 							
 
-					.arrasteExercicio.arrasteExercicio1.wow.fadeInUp(arraste=1)
+					.arrasteExercicio.arrasteExercicio1.wow.fadeInUp(arraste=1, exer=1)
 						.arrasteExercicioBase
 							.itCons
 								.itContainer
@@ -94,12 +97,13 @@ block body
 										img(src="../../assets/img/2025/sec02_it6.svg", alt="")
 
 							.contCons
-								.contContainer
-									.cont.dragDrop_element(alvo=1)
-										| Clicar no menu <br>minhas amostras
+								
 								.contContainer
 									.cont.dragDrop_element(alvo=2)
 										| Clicar em 'Recibo de Amostras Pendentes'
+								.contContainer
+									.cont.dragDrop_element(alvo=6)
+										| Salvar
 								.contContainer
 									.cont.dragDrop_element(alvo=3)
 										| Confirmar o número <br>do lote no sistema
@@ -110,8 +114,8 @@ block body
 									.cont.dragDrop_element(alvo=5)
 										| Informar a <br>quantidade Recebida
 								.contContainer
-									.cont.dragDrop_element(alvo=6)
-										| Salvar
+									.cont.dragDrop_element(alvo=1)
+										| Clicar no menu <br>minhas amostras
 										
 										
 
@@ -133,7 +137,7 @@ block body
 			
 				
 
-				.info.info2.wow.fadeInUp
+				#local3.info.info2.wow.fadeInUp.atB.at02.local.local3(local=3)
 					
 					.sec2_block01.wow.fadeInUp
 						h4.prop-l1
@@ -147,10 +151,10 @@ block body
 						.text.bold.azul.mt1_5 Por isso, é essencial registrar com precisão no Veeva CRM as quantidades e os lotes das amostras distribuídas a cada médico.
 						.infoSeta
 							img(src="../../assets/img/2025/sec02_setas.svg", alt="")
-							.text.azul Confira seus conhecimentos sobre esse processo, enumerando cada uma das etapas na ordem correta:
+							.text.azul.arrasteInfo Confira seus conhecimentos sobre esse processo, enumerando cada uma das etapas na ordem correta:
 							
 
-					.arrasteExercicio.arrasteExercicio2.wow.fadeInUp(arraste=2)
+					.arrasteExercicio.arrasteExercicio2.wow.fadeInUp(arraste=2, exer=2)
 						.arrasteExercicioBase
 							.itCons
 								.itContainer
@@ -183,32 +187,34 @@ block body
 
 							.contCons
 								.contContainer
-									.cont.dragDrop_element(alvo=1)
-										| Acessar o Veeva iRep
-								.contContainer
 									.cont.dragDrop_element(alvo=2)
 										| Clicar em 'meu painel'
-								.contContainer
-									.cont.dragDrop_element(alvo=3)
-										| Selecionar o <br>médico visitado
 								.contContainer
 									.cont.dragDrop_element(alvo=4)
 										| Registrar sua visita
 								.contContainer
-									.cont.dragDrop_element(alvo=5)
-										| Selecionar os <br>produtos promovidos
+									.cont.dragDrop_element(alvo=8)
+										| Coletar assinatura <br>do médico
+								.contContainer
+									.cont.dragDrop_element(alvo=1)
+										| Acessar o Veeva iRep
+								.contContainer
+									.cont.dragDrop_element(alvo=3)
+										| Selecionar o <br>médico visitado
+								.contContainer
+									.cont.dragDrop_element(alvo=9)
+										| Enviar
 								.contContainer
 									.cont.dragDrop_element(alvo=6)
 										| Clicar em <br>adicionar sample
 								.contContainer
+									.cont.dragDrop_element(alvo=5)
+										| Selecionar os <br>produtos promovidos
+								.contContainer
 									.cont.dragDrop_element(alvo=7)
 										| Lançar a <br>quantidade entregue
-								.contContainer
-									.cont.dragDrop_element(alvo=8)
-										| Coletar assinatura <br>do médico
-								.contContainer
-									.cont.dragDrop_element(alvo=9)
-										| Enviar
+								
+								
 										
 
 						butom.confirmar.mt2.wow.fadeInUp
@@ -229,11 +235,11 @@ block body
 								| Caso tenha alguma dúvida, consulte o material específico no Cornerstone SBX, busque como <b>"Transação de Amostra Grátis - Veeva"</b>
 			
 			
-				.info.info3.wow.fadeInUp
+				#local4.info.info3.wow.fadeInUp.atB.at03.local.local4(local=4)
 					
 					.sec2_block01.wow.fadeInUp
 						h4.prop-l1
-							| Qualidade das Amostras
+							| Qualidade das Amostras 
 					img.wow.zoomIn.sec2_01_img(src="../../assets/img/2025/sec04.png", alt="")
 
 
@@ -246,7 +252,7 @@ block body
 							video(src="../../assets/video/video2.mp4" controls controlsList="nodownload"  poster="../../assets/video/video2.png")
 
 
-			section.sec3.wow.fadeInUp
+			section#local5.sec3.wow.fadeInUp.atB.at03.local.local5(local=5)
 				
 				.info.wow.fadeInUp
 					.sec2_block01.wow.fadeInUp
@@ -265,16 +271,16 @@ block body
 			
 							.exercic02.wow.fadeInUp
 								.ques
-									.itq.itq1(it=0)
+									.itq.itq1(it=0, ques=1)
 										.circ
 										.val 12h
-									.itq.itq2(it=1)
+									.itq.itq2(it=1, ques=2)
 										.circ
 										.val 24h
-									.itq.itq3(it=0)
+									.itq.itq3(it=0, ques=3)
 										.circ
 										.val 48h
-									.itq.itq4(it=0)
+									.itq.itq4(it=0, ques=4)
 										.circ
 										.val 72h
 
@@ -300,7 +306,7 @@ block body
 						.text.mt1_5 Lembre-se de separar essas amostras das demais que você possui e aguarde orientações sobre como realizar a devolução para a AstraZeneca. <span class="destaqueX">Estas amostras recuperadas, sob nenhuma hipótese, podem ser entregues aos médicos.</span>
 						img.wow.zoomIn.sec2_02_img(src="../../assets/img/2025/sec06.png", alt="")
 
-			section.sec4.wow.fadeInUp.inativeB
+			section#local6.sec4.wow.fadeInUp.inativeB.local.local6(local=6)
 				
 				.info.wow.fadeInUp
 					.sec2_block01.wow.fadeInUp
@@ -315,7 +321,7 @@ block body
 							li Sempre que possível, utilize estacionamentos para maior segurança.
 							li Caso não haja estacionamento disponível, leve as amostras com você e evite deixá-las <br>desacompanhadas no veículo.
 			
-			section.sec5.wow.fadeInUp.inativeB
+			section#local7.sec5.wow.fadeInUp.inativeB.local.local7(local=7)
 				
 				.info.wow.fadeInUp
 					.sec2_block01.wow.fadeInUp
@@ -330,7 +336,7 @@ block body
 						.text.mt1 A equipe de Qualidade é responsável por investigar a procedência de desvios e encaminhar os casos aos times globais.
 						.text.mt1 Por isso, <b class="azul">aguarde as orientações antes de tomar qualquer ação</b>.
 			
-			section.sec6.wow.fadeInUp.inativeB
+			section#local8.sec6.wow.fadeInUp.inativeB.local.local8(local=8)
 				
 				.info.wow.fadeInUp
 					.sec2_block01.wow.fadeInUp
@@ -351,7 +357,7 @@ block body
 									li <b>Aguarde orientações do operador</b> logístico para a coleta <br>dos medicamentos.
 								.text.azul.bold As amostras coletadas seguirão os procedimentos internos <br>de destruição.
 			
-			section.sec7.wow.fadeInUp.inativeB
+			section#local9.sec7.wow.fadeInUp.inativeB.local.local9(local=9)
 				
 				.info.wow.fadeInUp
 					.sec2_block01.wow.fadeInUp
@@ -367,7 +373,7 @@ block body
 						.blockTxt.mt1
 							.text O procedimento é padronizado e deve ser conduzido pelo GD. Primeiro, ele deve transferir o saldo de amostras para si próprio e, em seguida, realizar a transferência para outro representante.
 			
-			section.sec8.wow.fadeInUp.inativeB
+			section#local10.sec8.wow.fadeInUp.inativeB.local.local10(local=10)
 				
 				.info.wow.fadeInUp
 					.sec2_block01.wow.fadeInUp
@@ -381,7 +387,7 @@ block body
 						.containerVideo.wow.zoomIn.delay1
 							video(src="../../assets/video/video3.mp4" controls controlsList="nodownload"  poster="../../assets/video/video3.png")
 			
-			section.sec12.wow.fadeInUp.inativeB#controlComplete
+			section#local11.sec12.wow.fadeInUp.inativeB.local.local11(local=11)
 				
 				.info.wow.fadeInUp
 					.sec2_block01.wow.fadeInUp
@@ -393,10 +399,10 @@ block body
 						
 						.infoSeta
 							img(src="../../assets/img/2025/sec02_setas.svg", alt="")
-							.text.azul Arraste os números para associar corretamente cada texto à imagem que representa uma situação de risco — provável ou evidente — no cuidado, armazenamento ou manuseio das nossas amostras grátis.
+							.text.azul.arrasteInfo Arraste os números para associar corretamente cada texto à imagem que representa uma situação de risco — provável ou evidente — no cuidado, armazenamento ou manuseio das nossas amostras grátis.
 							
 
-					.arrasteExercicio.arrasteExercicio5.wow.fadeInUp(arraste=5)
+					.arrasteExercicio.arrasteExercicio5.wow.fadeInUp(arraste=5, exer=3, end=1)
 						.arrasteExercicioBase
 							.itCons
 								.itContainer
@@ -423,20 +429,21 @@ block body
 
 							.contCons
 								.contContainer
-									.cont.dragDrop_element(alvo=1)
-										img(src="../../assets/img/2025/sec13e.png", alt="")
+									.cont.dragDrop_element(alvo=5)
+										img(src="../../assets/img/2025/sec13d.png", alt="")
 								.contContainer
 									.cont.dragDrop_element(alvo=2)
 										img(src="../../assets/img/2025/sec13a.png", alt="")
 								.contContainer
-									.cont.dragDrop_element(alvo=3)
-										img(src="../../assets/img/2025/sec13c.png", alt="")
-								.contContainer
 									.cont.dragDrop_element(alvo=4)
 										img(src="../../assets/img/2025/sec13b.png", alt="")
 								.contContainer
-									.cont.dragDrop_element(alvo=5)
-										img(src="../../assets/img/2025/sec13d.png", alt="")
+									.cont.dragDrop_element(alvo=1)
+										img(src="../../assets/img/2025/sec13e.png", alt="")
+								.contContainer
+									.cont.dragDrop_element(alvo=3)
+										img(src="../../assets/img/2025/sec13c.png", alt="")
+								
 								
 										
 
@@ -453,7 +460,7 @@ block body
 							.text.text4
 								| <span class="bold vermelho">Humm... teve alguns erros :(. Dê uma olhada na ordem correta.</span>
 						
-						
+						.infoFinish.wow.fadeInUp.delay2 Você concluiu o Treinamento Anual de Amostras Grátis.
 				
 			
 

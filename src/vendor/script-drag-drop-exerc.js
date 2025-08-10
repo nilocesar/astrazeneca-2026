@@ -35,13 +35,15 @@
         }
 
         //verifica a resolução min com base na variavel do CSS Tablet( tema > structure.less )
-        var resolucaoMin = (css_var('--tablet', '900') >= $(window).width()) ? true : false;
+        var resolucaoMin = (css_var('--tablet', '1024') >= $(window).width()) ? true : false;
         if (BASE.SETTINGS.relacionar){
             resolucaoMin = true;
         }
 
         if(resolucaoMin){
-            $('.arrasteInfo').html('É só clicar e colocar na posição que imagina.')
+            $(".arrasteInfo").html(
+              "Clique no número e depois no espaço vazio correspondente para relacioná-los."
+            );
         }
 
 

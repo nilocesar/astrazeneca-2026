@@ -6,10 +6,14 @@ block styles
 block body
 
 		.header
+		.loaderBase
+			.lds-eclipse
+				.spinner
+				.spinner.reverse
 			
 
 		.body
-			section.sec1
+			section#local1.sec1.local.local1(local=1)
 				.baseTop.animated.fadeInDown
 					.titulo.wow.fadeInRight.btnVoltar 
 						button  <i class="fa fa-chevron-circle-left" aria-hidden="true"></i>
@@ -47,7 +51,7 @@ block body
 						img.wow.zoomIn(src="../../assets/img/close.svg", alt="")
 							
 						
-			section.sec5D.wow.fadeInUp
+			section#local2.sec5D.wow.fadeInUp.local.local2.inativeIn(local=2)
 				.info.wow.fadeInUp
 					.sec2_block01.wow.fadeInUp
 						h3
@@ -72,12 +76,12 @@ block body
 						.subS
 							img.wow.zoomIn.sec2_03_img(src="../../assets/img/2025/sec12c.png", alt="")
 							.text Após a definição da quantidade, as amostras são faturadas e enviadas <br>para a residência dos colaboradores.
-							.text.mt1.bold.azul <a class="azul"  href="" target="_blank">Confira</a> os limites máximos por apresentação para os produtos. 
+							.text.mt1.bold.azul <a class="azul"  href="https://login.veevavault.com/auth/login?retURL=https%3A%2F%2Fastrazeneca-eqv.veevavault.com/ui/%23doc_info/420329/13/0%3FanQS%3Dpage50%26annotate%3Dfalse" target="_blank">Confira</a> os limites máximos por apresentação para os produtos. 
 							.text.mt1 Após o faturamento, as amostras seguem para a residência do Representante,<br> que deve registrar a confirmação de recebimento no sistema Veeva CRM.
 
 
 
-			section.sec3.wow.fadeInUp
+			section#local3.sec3.wow.fadeInUp.atB.at01.local.local3.inativeIn(local=3)
 				
 				.info.wow.fadeInUp
 					.sec2_block01.wow.fadeInUp
@@ -96,16 +100,16 @@ block body
 			
 							.exercic02.wow.fadeInUp
 								.ques
-									.itq.itq1(it=0)
+									.itq.itq1(it=0, ques=1)
 										.circ
 										.val 12h
-									.itq.itq2(it=1)
+									.itq.itq2(it=1, ques=2)
 										.circ
 										.val 24h
-									.itq.itq3(it=0)
+									.itq.itq3(it=0, ques=3)
 										.circ
 										.val 48h
-									.itq.itq4(it=0)
+									.itq.itq4(it=0, ques=4)
 										.circ
 										.val 72h
 
@@ -132,7 +136,7 @@ block body
 						img.wow.zoomIn.sec2_02_img(src="../../assets/img/2025/sec06.png", alt="")
 
 			
-			section.sec8.wow.fadeInUp.inativeB
+			section#local4.sec8.wow.fadeInUp.inativeB.local.local4(local=4)
 				
 				.info.wow.fadeInUp
 					.sec2_block01.wow.fadeInUp
@@ -146,7 +150,7 @@ block body
 						.containerVideo.wow.zoomIn.delay1
 							video(src="../../assets/video/video3.mp4" controls controlsList="nodownload"  poster="../../assets/video/video3.png")
 
-			section.sec12.wow.fadeInUp.inativeB#controlComplete
+			section#local7.sec12.wow.fadeInUp.inativeB.local.local7(local=7)
 				
 				.info.wow.fadeInUp
 					.sec2_block01.wow.fadeInUp
@@ -158,10 +162,10 @@ block body
 						
 						.infoSeta
 							img(src="../../assets/img/2025/sec02_setas.svg", alt="")
-							.text.azul Arraste os números para associar corretamente cada texto à imagem que representa uma situação de risco — provável ou evidente — no cuidado, armazenamento ou manuseio das nossas amostras grátis.
+							.text.azul.arrasteInfo Arraste os números para associar corretamente cada texto à imagem que representa uma situação de risco — provável ou evidente — no cuidado, armazenamento ou manuseio das nossas amostras grátis.
 							
 
-					.arrasteExercicio.arrasteExercicio5.wow.fadeInUp(arraste=5)
+					.arrasteExercicio.arrasteExercicio5.wow.fadeInUp(arraste=5, exer=1, end=1)
 						.arrasteExercicioBase
 							.itCons
 								.itContainer
@@ -188,20 +192,20 @@ block body
 
 							.contCons
 								.contContainer
-									.cont.dragDrop_element(alvo=1)
-										img(src="../../assets/img/2025/sec13e.png", alt="")
+									.cont.dragDrop_element(alvo=5)
+										img(src="../../assets/img/2025/sec13d.png", alt="")
 								.contContainer
 									.cont.dragDrop_element(alvo=2)
 										img(src="../../assets/img/2025/sec13a.png", alt="")
 								.contContainer
-									.cont.dragDrop_element(alvo=3)
-										img(src="../../assets/img/2025/sec13c.png", alt="")
-								.contContainer
 									.cont.dragDrop_element(alvo=4)
 										img(src="../../assets/img/2025/sec13b.png", alt="")
 								.contContainer
-									.cont.dragDrop_element(alvo=5)
-										img(src="../../assets/img/2025/sec13d.png", alt="")
+									.cont.dragDrop_element(alvo=1)
+										img(src="../../assets/img/2025/sec13e.png", alt="")
+								.contContainer
+									.cont.dragDrop_element(alvo=3)
+										img(src="../../assets/img/2025/sec13c.png", alt="")
 								
 										
 
@@ -217,6 +221,8 @@ block body
 							img(src="../../assets/img/2025/sec02_neg.svg", alt="")
 							.text.text4
 								| <span class="bold vermelho">Humm... teve alguns erros :(. Dê uma olhada na ordem correta.</span>
+						
+						.infoFinish.wow.fadeInUp.delay2 Você concluiu o Treinamento Anual de Amostras Grátis.
 						
 						
 				

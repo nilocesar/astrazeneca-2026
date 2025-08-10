@@ -1,18 +1,71 @@
 events.on("ready", function () {
   modal();
-  nota();
-  // clock();
   exercTime();
   dragdrop();
   quiz();
 
-  controlComplete();
+  // controlComplete();
   animate_wow();
+
+  controlBlock();
 
   $(".btnVoltar").on("click", function () {
     navigate.goto("00_menu");
   });
 });
+
+function controlBlock() {
+  var uidPAGE = window.uid;
+  $(".atB").addClass("inativeIn");
+
+  setTimeout(function () {
+    $(".loaderBase").css("display", "none");
+    if (scorm.loadObject("local" + uidPAGE)) {
+      const local = scorm.loadObject("local" + uidPAGE);
+
+      $("html, body").animate(
+        {
+          scrollTop: $("#local" + local).offset().top - $(".baseTop").height(),
+        },
+        0
+      );
+    }
+  }, 1000 * 1);
+
+  if (scorm.loadObject("localMaior" + uidPAGE)) {
+    var localMaior = scorm.loadObject("localMaior" + uidPAGE);
+
+    for (var i = 1; i <= parseInt(localMaior); i++) {
+      $(`[local=${i}]`).removeClass("inativeIn");
+    }
+  }
+
+  $(".local").each(function (it, elem) {
+    const id = $(elem)[0].id;
+    $("#" + id).isInViewportComplete({
+      container: window,
+      call: function (_this) {
+        scorm.saveObject("local" + uidPAGE, parseInt($(_this).attr("local")));
+
+        if (scorm.loadObject("localMaior" + uidPAGE)) {
+          var localMaior = scorm.loadObject("localMaior" + uidPAGE);
+          if (parseInt(localMaior) <= parseInt($(_this).attr("local"))) {
+            scorm.saveObject(
+              "localMaior" + uidPAGE,
+              parseInt($(_this).attr("local"))
+            );
+          }
+        } else {
+          scorm.saveObject(
+            "localMaior" + uidPAGE,
+            parseInt($(_this).attr("local"))
+          );
+        }
+        // scorm.setCompleted();
+      },
+    });
+  });
+}
 
 function modal() {
   $(".openModal").on("click", function () {
@@ -26,41 +79,111 @@ function modal() {
     $(".modalGeral").css("display", "none");
     $("html").css("overflow-y", "auto");
 
-    console.log($(this).parent().find("video").get(0));
+    $("[local=2]").removeClass("inativeIn");
+    $("[local=3]").removeClass("inativeIn");
+
+    $("html, body").animate(
+      {
+        scrollTop: $("#local2").offset().top - $(".baseTop").height(),
+      },
+      500
+    );
+
     $(this).parent().find("video").get(0).pause();
   });
 }
 
-function nota() {
-  $(".icons img").addClass("inativo");
-  $(".icons img").on("click", function () {
-    var videoCurrent = $(this).parent().attr("item");
-    var status = $(this).attr("status");
+function getCache(_template) {
+  var uidPAGE = window.uid;
+  var exItem = _template.attr("exer");
 
-    //$(this).parent().find('img').addClass('inativo');
-    $(this).removeClass("inativo");
-    $(this).parent().find("img").css("pointer-events", "none");
+  if (scorm.loadObject("dragdrop")) {
+    //var dragdrop = JSON.parse(scorm.loadObject('dragdrop'));
+    var dragdrop = scorm.loadObject("dragdrop");
 
-    scorm.saveObject("video" + videoCurrent, status);
-  });
+    // console.log("dragdrop", dragdrop);
+
+    if (dragdrop.length > 0) {
+      $.each(dragdrop, function (indice, item) {
+        if (item.uid == uidPAGE && item.q == exItem) {
+          // console.log("item" + item);
+          // $(_template).find(".button-confirm").removeClass("hide");
+          // $(_template).find(".button-confirm").html(cacheBtn);
+
+          $(_template)
+            .find(".alvo")
+            .each(function (ind, it) {
+              var alv = item.a[ind];
+              if (alv.length > 0) {
+                $.each(alv, function (indX, itemX) {
+                  $(it).attr("a" + itemX, 1);
+                  $(it).attr("alvoAtivo", 1);
+
+                  var _arraste = $(_template).find(".arraste" + itemX);
+                  var _clone = _arraste.clone();
+                  _arraste.addClass("cloneItens");
+
+                  $(it).append(_clone);
+                });
+              }
+            });
+
+          // $(_template).find(".arraste").removeClass("featuredItens");
+          $(_template).find(".arraste").css("pointer-events", "none");
+          $(_template).find(".alvo").css("pointer-events", "none");
+
+          setTimeout(function () {
+            $(_template).find(".confirmar").trigger("click");
+          }, 1000 * 1);
+        }
+      });
+    }
+  }
 }
 
-function clock() {
-  $(".clockTxt").css("display", "none");
-  $(".clockBtn").on("click", function () {
-    $(this).removeClass("pulse animated infinite");
-    $(".clockTxt").css("display", "flex");
+function saveCache(_template, resFeed) {
+  var arrasteAll = $(_template).find(".dragDrop_element").length;
+  var exItem = _template.attr("exer");
+  var uidPAGE = window.uid;
+  //// informação para caso precise salvar no suspendata
+  var drag_drop = [];
+  var drag_drop_cache = [];
+  if (scorm.loadObject("dragdrop")) {
+    drag_drop = scorm.loadObject("dragdrop");
+  }
 
-    $("html, body").animate(
-      {
-        scrollTop:
-          $(".clockTxt").offset().top -
-          $(".header").height() -
-          $(".header").height() * 0.2,
-      },
-      500
-    );
+  $(_template)
+    .find(".alvo")
+    .each(function (indice, item) {
+      var alvo = [];
+      for (var i = 1; i <= arrasteAll; i++) {
+        if ($(this).attr("a" + i)) {
+          alvo.push(i);
+        }
+      }
+      drag_drop_cache.push(alvo);
+    });
+
+  $.each(drag_drop, function (indice, it) {
+    try {
+      if (it && it["uid"] == uidPAGE && it["q"] == exItem) {
+        drag_drop.splice(indice, 1);
+      }
+    } catch (e) {
+      // declarações para manipular quaisquer exceções
+      console.error("erro no array do dragdrop", e); // passa o objeto de exceção para o manipulador de erro
+    }
   });
+
+  var _obj = {
+    uid: uidPAGE,
+    q: exItem,
+    a: drag_drop_cache,
+    r: parseInt(resFeed),
+  };
+
+  drag_drop.push(_obj);
+  scorm.saveObject("dragdrop", drag_drop);
 }
 
 function dragdrop() {
@@ -69,20 +192,21 @@ function dragdrop() {
 
     _template.find(".feed").css("display", "none");
     _template.find(".alert").css("display", "none");
+    _template.find(".infoFinish").css("display", "none");
 
     ///randomizar arrastes
-    ///randomizar arrastes
-    _template.find(".contCons").html(
-      _template.find(".contCons .contContainer").sort(function () {
-        return Math.random() - 0.5;
-      })
-    );
+    // _template.find(".contCons").html(
+    //   _template.find(".contCons .contContainer").sort(function () {
+    //     return Math.random() - 0.5;
+    //   })
+    // );
 
     $(_template).drag_drop_exerc({
       itemClass: "dragDrop_element",
       limiteAlvo: 1,
       call: function (e) {
         if (e.action.status == "init") {
+          getCache(_template);
         }
         if (e.action.status == "confirmar") {
           //e.action.response
@@ -90,30 +214,44 @@ function dragdrop() {
           $(_template).find(".confirmar").css("display", "none");
           $(_template).find(".dragDrop_element").addClass("inativoArraste");
 
-          var _feed = null;
           var _status = "positivo";
           if (e.action.response == true) {
-            _feed = _template.find(".feed-pos");
             _template.find(".feed-pos").css("display", "flex");
             _template.find(".alert").css("display", "block");
+            // $(_template).attr("res-feed", 1);
+            saveCache(_template, 1);
           } else {
-            _feed = _template.find(".feed-neg");
             _template.find(".feed-neg").css("display", "flex");
             _template.find(".alert").css("display", "block");
             _status = "negativo";
+            // $(_template).attr("res-feed", 0);
+            saveCache(_template, 0);
           }
 
-          $("html, body").animate(
-            {
-              scrollTop:
-                $(_template).offset().top -
-                $(".header").height() -
-                $(".header").height() * 0.5,
-            },
-            500
-          );
+          // $("html, body").animate(
+          //   {
+          //     scrollTop:
+          //       $(_template).offset().top -
+          //       $(".header").height() -
+          //       $(".header").height() * 0.5,
+          //   },
+          //   500
+          // );
 
-          scorm.saveObject("arraste" + _template.attr("arraste"), _status);
+          if (_template.attr("exer") == 1) {
+            $("[local=3]").removeClass("inativeIn");
+          }
+          if (_template.attr("exer") == 2) {
+            $("[local=4]").removeClass("inativeIn");
+            $("[local=5]").removeClass("inativeIn");
+          }
+
+          if (_template.attr("end") == 1) {
+            scorm.setCompleted();
+            _template.find(".infoFinish").css("display", "flex");
+          }
+
+          // scorm.saveObject("arraste" + _template.attr("arraste"), _status);
         }
       },
     });
@@ -177,15 +315,15 @@ function quiz() {
       $(".containerExercicio .btnConfrmar").css("display", "none");
       $(".rodape").css("display", "block");
 
-      $("html, body").animate(
-        {
-          scrollTop:
-            _feed.offset().top -
-            $(".header").height() -
-            $(".header").height() * 0.5,
-        },
-        500
-      );
+      // $("html, body").animate(
+      //   {
+      //     scrollTop:
+      //       _feed.offset().top -
+      //       $(".header").height() -
+      //       $(".header").height() * 0.5,
+      //   },
+      //   500
+      // );
 
       $(".containerExercicio .alter").addClass("inativ");
     });
@@ -201,35 +339,40 @@ function quiz() {
     if (_status) {
       $(".containerExercicio .btnConfrmar").css("display", "flex");
 
-      $("html, body").animate(
-        {
-          scrollTop: $(".containerExercicio .btnConfrmar").offset().top,
-        },
-        500
-      );
+      // $("html, body").animate(
+      //   {
+      //     scrollTop: $(".containerExercicio .btnConfrmar").offset().top,
+      //   },
+      //   500
+      // );
     }
   }
 }
 
 function exercTime() {
   $(".exercic02 .feedImg").css("display", "none");
-  $(".inativeB").css("display", "none");
 
-  $(".exercic02 .itq").on("click", function () {
+  const exerc02 = (_this) => {
     $(".exercic02 .itq").css("pointer-events", "none");
 
-    var _it = $(this).attr("it");
+    var _it = $(_this).attr("it");
+    var _ques = $(_this).attr("ques");
+    scorm.saveObject("quesRes" + window.uid, _ques);
+
     if (_it == 1) {
-      $(this).addClass("itPos");
+      $(_this).addClass("itPos");
       $(".exercic02 .feedImgPos").css("display", "block");
     } else {
-      $(this).addClass("itNeg");
+      $(_this).addClass("itNeg");
       $(".exercic02 .feedImgNeg").css("display", "block");
-
       $(".exercic02 .itq[it=1]").addClass("itPos");
     }
 
-    $(".inativeB").css("display", "block");
+    $(".inativeB").removeClass("inativeB");
+  };
+
+  $(".exercic02 .itq").on("click", function () {
+    exerc02(this);
 
     $("html, body").animate(
       {
@@ -238,6 +381,12 @@ function exercTime() {
       500
     );
   });
+
+  if (scorm.loadObject("quesRes" + window.uid)) {
+    var quesRes = scorm.loadObject("quesRes" + window.uid);
+    exerc02($(`.exercic02 [ques=${quesRes}]`));
+    $(".inativeB").removeClass("inativeB");
+  }
 }
 
 function avaliacao(_indice, _correta, _resposta) {
@@ -270,8 +419,8 @@ function controlComplete() {
   $("#controlComplete").isInViewportComplete({
     container: window,
     call: function () {
-      console.log("complete one-page");
-      scorm.setCompleted();
+      // console.log("complete one-page");
+      // scorm.setCompleted();
     },
   });
 }
