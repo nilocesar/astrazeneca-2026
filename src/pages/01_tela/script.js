@@ -80,13 +80,19 @@ function modal() {
     $("html").css("overflow-y", "auto");
 
     $("[local=2]").removeClass("inativeIn");
+    $(".loaderBase").css("display", "flex");
 
-    $("html, body").animate(
-      {
-        scrollTop: $("#local2").offset().top - $(".baseTop").height(),
-      },
-      500
-    );
+    setTimeout(function () {
+      $(".loaderBase").css("display", "none");
+      $("html, body").animate(
+        {
+          scrollTop: $("#local2").offset().top - $(".baseTop").height(),
+        },
+        500
+      );
+    }, 1000 * 1);
+
+    
 
     $(this).parent().find("video").get(0).pause();
   });

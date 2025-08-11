@@ -82,12 +82,17 @@ function modal() {
     $("[local=2]").removeClass("inativeIn");
     $("[local=3]").removeClass("inativeIn");
 
-    $("html, body").animate(
-      {
-        scrollTop: $("#local2").offset().top - $(".baseTop").height(),
-      },
-      500
-    );
+    $(".loaderBase").css("display", "flex");
+
+    setTimeout(function () {
+      $(".loaderBase").css("display", "none");
+      $("html, body").animate(
+        {
+          scrollTop: $("#local2").offset().top - $(".baseTop").height(),
+        },
+        500
+      );
+    }, 1000 * 1);
 
     $(this).parent().find("video").get(0).pause();
   });
