@@ -37,6 +37,7 @@ function controlBlock() {
 
     for (var i = 1; i <= parseInt(localMaior); i++) {
       $(`[local=${i}]`).removeClass("inativeIn");
+      $(`[local=${i}]`).removeClass("inativeB");
     }
   }
 
@@ -79,8 +80,16 @@ function modal() {
     $(".modalGeral").css("display", "none");
     $("html").css("overflow-y", "auto");
 
-    $("[local=2]").removeClass("inativeIn");
-    $("[local=3]").removeClass("inativeIn");
+    var goto = $(this).attr("goto");
+
+    if (goto == "local2") {
+      $("[local=2]").removeClass("inativeIn");
+      $("[local=3]").removeClass("inativeIn");
+    }
+
+    if (goto == "local7") {
+      $("#local7").removeClass("inativeB");
+    } 
 
     $(".loaderBase").css("display", "flex");
 
@@ -88,7 +97,7 @@ function modal() {
       $(".loaderBase").css("display", "none");
       $("html, body").animate(
         {
-          scrollTop: $("#local2").offset().top - $(".baseTop").height(),
+          scrollTop: $("#" + goto).offset().top - $(".baseTop").height(),
         },
         500
       );
@@ -198,6 +207,7 @@ function dragdrop() {
     _template.find(".feed").css("display", "none");
     _template.find(".alert").css("display", "none");
     _template.find(".infoFinish").css("display", "none");
+    _template.find(".resF").css("opacity", 0);
 
     ///randomizar arrastes
     // _template.find(".contCons").html(
@@ -228,6 +238,7 @@ function dragdrop() {
           } else {
             _template.find(".feed-neg").css("display", "flex");
             _template.find(".alert").css("display", "block");
+            _template.find(".resF").css("opacity", 1);
             _status = "negativo";
             // $(_template).attr("res-feed", 0);
             saveCache(_template, 0);
@@ -249,6 +260,10 @@ function dragdrop() {
           if (_template.attr("exer") == 2) {
             $("[local=4]").removeClass("inativeIn");
             $("[local=5]").removeClass("inativeIn");
+          }
+
+          if (_template.attr("exer") == 3) {
+            $("[local=8]").removeClass("inativeB");
           }
 
           if (_template.attr("end") == 1) {
@@ -374,6 +389,8 @@ function exercTime() {
     }
 
     $(".inativeB").removeClass("inativeB");
+    $("[local=7]").addClass("inativeB");
+    $("[local=8]").addClass("inativeB");
   };
 
   $(".exercic02 .itq").on("click", function () {
@@ -391,6 +408,8 @@ function exercTime() {
     var quesRes = scorm.loadObject("quesRes" + window.uid);
     exerc02($(`.exercic02 [ques=${quesRes}]`));
     $(".inativeB").removeClass("inativeB");
+    $("[local=7]").addClass("inativeB");
+    $("[local=8]").addClass("inativeB");
   }
 }
 

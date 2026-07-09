@@ -7,6 +7,7 @@ events.on("ready", function () {
   // controlComplete();
   animate_wow();
 
+  //$(".loaderBase").css("display", "none");
   controlBlock();
 
   $(".btnVoltar").on("click", function () {
@@ -37,6 +38,7 @@ function controlBlock() {
 
     for (var i = 1; i <= parseInt(localMaior); i++) {
       $(`[local=${i}]`).removeClass("inativeIn");
+      $(`[local=${i}]`).removeClass("inativeB");
     }
   }
 
@@ -79,14 +81,23 @@ function modal() {
     $(".modalGeral").css("display", "none");
     $("html").css("overflow-y", "auto");
 
-    $("[local=2]").removeClass("inativeIn");
+    var goto = $(this).attr("goto");
+
+    if (goto == "local2") {
+      $("[local=2]").removeClass("inativeIn");
+    } 
+
+    if (goto == "local11") {
+      $("#local11").removeClass("inativeB");
+    } 
+   
     $(".loaderBase").css("display", "flex");
 
     setTimeout(function () {
       $(".loaderBase").css("display", "none");
       $("html, body").animate(
         {
-          scrollTop: $("#local2").offset().top - $(".baseTop").height(),
+          scrollTop: $("#" + goto).offset().top - $(".baseTop").height(),
         },
         500
       );
@@ -197,6 +208,7 @@ function dragdrop() {
 
     _template.find(".feed").css("display", "none");
     _template.find(".alert").css("display", "none");
+    _template.find(".resF").css("opacity", 0);
     _template.find(".infoFinish").css("display", "none");
 
     ///randomizar arrastes
@@ -226,6 +238,7 @@ function dragdrop() {
             // $(_template).attr("res-feed", 1);
             saveCache(_template, 1);
           } else {
+            _template.find(".resF").css("opacity", 1);
             _template.find(".feed-neg").css("display", "flex");
             _template.find(".alert").css("display", "block");
             _status = "negativo";
@@ -249,6 +262,10 @@ function dragdrop() {
           if (_template.attr("exer") == 2) {
             $("[local=4]").removeClass("inativeIn");
             $("[local=5]").removeClass("inativeIn");
+          }
+
+          if (_template.attr("exer") == 3) {
+            $("[local=12]").removeClass("inativeB");
           }
 
           if (_template.attr("end") == 1) {
@@ -374,6 +391,8 @@ function exercTime() {
     }
 
     $(".inativeB").removeClass("inativeB");
+    $("[local=11]").addClass("inativeB");
+    $("[local=12]").addClass("inativeB");
   };
 
   $(".exercic02 .itq").on("click", function () {

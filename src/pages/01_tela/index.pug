@@ -44,7 +44,7 @@ block body
 			.modalBase.modalGeral.modalGeral1.wow.fadeIn
 				.modalBaseData
 					video(src="../../assets/video/video1.mp4" controls controlsList="nodownload"  poster="../../assets/video/video1.png")
-					button.close-btn.modal-close.pulse 
+					button.close-btn.modal-close.pulse(goto="local2") 
 						img.wow.zoomIn(src="../../assets/img/close.svg", alt="")
 							
 						
@@ -134,7 +134,7 @@ block body
 						
 						.text.alert.alertBase.text1.mt1.wow.fadeInUp
 								| Caso tenha alguma dificuldade nesse procedimento, consulte o material específico deste tema no Cornerstone SBX, para encontrá-lo digite: <b>"Transação de Amostra Grátis – Veeva"</b>
-			
+
 				
 
 				#local3.info.info2.wow.fadeInUp.atB.at02.local.local3(local=3)
@@ -382,17 +382,88 @@ block body
 					img.wow.zoomIn.sec2_01_img(src="../../assets/img/2025/sec11.png", alt="")
 
 					.line.wow.fadeInUp
-						.text
+						.text.branca
 							| Assista ao vídeo e conheça em detalhes mais desse importante<br> processo no nosso trato com as amostras.
-						.containerVideo.wow.zoomIn.delay1
-							video(src="../../assets/video/video3.mp4" controls controlsList="nodownload"  poster="../../assets/video/video3.png")
-			
-			section#local11.sec12.wow.fadeInUp.inativeB.local.local11(local=11)
+						
+						.player.mt1_5
+							button.openModal.pulse(mod="modalGeral2") 
+								img.wow.zoomIn(src="../../assets/img/2025/btnPlay01.png", alt="")
+								
+					
+							#local11.inativeB.local.local11.mt1_5(local=11)
+								.text.branca
+									| Esperamos que tenha gostado do vídeo!<br>Vamos ver se assimilou o conteúdo?
+								.boxBase
+									
+									.infoSeta
+										img(src="../../assets/img/2025/sec02_setas.svg", alt="")
+										div
+											.text.branca Desafio 1: Associe cada profissional à sua <br>responsabilidade no processo de Recall
+										
+
+									.arrasteExercicio.arrasteExercicio1.wow.fadeInUp(arraste=3, exer=3)
+										.arrasteExercicioBase
+											.itCons
+												.itContainer
+													.it.it1.dragDrop_element(arraste=1) 
+														p Representante
+												
+												.itContainer
+													.it.it2.dragDrop_element(arraste=2) 
+														p Gerente Distrital
+
+												.itContainer
+													.it.it3.dragDrop_element(arraste=3)
+														p Suporte à Força de Vendas
+
+											.contCons
+												
+												.contContainer
+													.cont.dragDrop_element(alvo=2)
+														p Responder pelo representante quando ele estiver de férias ou afastado.
+														.resF Gerente Distrital
+
+												.contContainer
+													.cont.dragDrop_element(alvo=3)
+														p Garantir o envio dos comunicados de Recall e Simulado de Recall.
+														.resF Suporte à Força de Vendas
+
+												.contContainer
+													.cont.dragDrop_element(alvo=1)
+														p Responder às solicitações de Recall ou Simulado de Recall dentro do prazo.
+														.resF Representante
+														
+														
+										.baseConfeir
+											butom.confirmar.mt2.wow.fadeInUp
+												| <span>Clique</span> para conferir.
+
+										.feed.feed-pos.wow.fadeInUp
+											img(src="../../assets/img/2025/sec02_check.svg", alt="")
+											.text.text4
+												| <span class="bold branca">Excelente! Você compreendeu os papéis de cada equipe e os principais procedimentos do Recall e do Simulado de Recall.</span>
+										
+										.feed.feed-neg.wow.fadeInUp
+											img(src="../../assets/img/excla10.svg", alt="")
+											.text.text4
+												| <span class="bold branca">Revise o conteúdo do vídeo e tente novamente. Lembre-se de que conhecer o papel de cada profissional e cumprir corretamente os registros e prazos é fundamental para garantir a rastreabilidade das amostras e a segurança dos pacientes.</span>
+										
+										.text.alert.alertBase.text1.mt1.wow.fadeInUp.branca
+												| <b>Siga para o Desfio 2.</b>
+
+							
+			.modalBase.modalGeral.modalGeral2.wow.fadeIn
+				.modalBaseData
+					video(src="../../assets/video/video3.mp4" controls controlsList="nodownload"  poster="../../assets/video/video3.png")
+					button.close-btn.modal-close.pulse(goto="local11")  
+						img.wow.zoomIn(src="../../assets/img/close.svg", alt="")
+						
+			section#local12.sec12.wow.fadeInUp.inativeB.local.local12(local=12)
 				
 				.info.wow.fadeInUp
 					.sec2_block01.wow.fadeInUp
 						h4.prop-l1
-							| <b>Desafio:</b> Identifique situações de risco às nossas amostras
+							| <b>Desafio 2:</b> Identifique situações de risco às nossas amostras
 					img.wow.zoomIn.sec2_01_img(src="../../assets/img/2025/sec13.png", alt="")
 
 					.line.wow.fadeInUp
@@ -402,7 +473,7 @@ block body
 							.text.azul.arrasteInfo Arraste os números para associar corretamente cada texto à imagem que representa uma situação de risco — provável ou evidente — no cuidado, armazenamento ou manuseio das nossas amostras grátis.
 							
 
-					.arrasteExercicio.arrasteExercicio5.wow.fadeInUp(arraste=5, exer=3, end=1)
+					.arrasteExercicio.arrasteExercicio5.wow.fadeInUp(arraste=5, exer=4, end=1)
 						.arrasteExercicioBase
 							.itCons
 								.itContainer

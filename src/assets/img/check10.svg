@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="Camada_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" viewBox="0 0 76.3 76.3">
+  <!-- Generator: Adobe Illustrator 30.4.0, SVG Export Plug-In . SVG Version: 2.1.4 Build 226)  -->
+  <defs>
+    <style>
+      .st0 {
+        filter: url(#drop-shadow-1);
+      }
+
+      .st1 {
+        fill: #fff;
+      }
+
+      .st2 {
+        fill: #ccd40a;
+      }
+    </style>
+    <filter id="drop-shadow-1" x="0" y="0" width="76.3" height="76.3" filterUnits="userSpaceOnUse">
+      <feOffset dx="0" dy="0"/>
+      <feGaussianBlur result="blur" stdDeviation="2"/>
+      <feFlood flood-color="#010101" flood-opacity=".8"/>
+      <feComposite in2="blur" operator="in"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+  </defs>
+  <g class="st0">
+    <rect class="st2" x="15.5" y="15.4" width="45.3" height="45.3" transform="translate(38.1 -15.9) rotate(45)"/>
+  </g>
+  <path class="st1" d="M56.1,36.4l-19,19c-.8.8-2,.8-2.8,0l-12.5-12.5c-.8-.8-.8-2,0-2.8l3.2-3.2c.8-.8,2-.8,2.8,0l7.9,7.9,14.4-14.4c.8-.8,2-.8,2.8,0l3.2,3.2c.8.8.8,2,0,2.8Z"/>
+</svg>
