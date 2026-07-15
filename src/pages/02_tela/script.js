@@ -263,7 +263,7 @@ function dragdrop() {
           }
 
           if (_template.attr("exer") == 3) {
-            $("[local=7]").removeClass("inativeB");
+            $("[local=8]").removeClass("inativeB");
           }
 
 
